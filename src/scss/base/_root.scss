@@ -1,0 +1,29 @@
+:root {
+  --main-wrapper-width: 1420px;
+  --main-wrapper-padding: 0px 56px;
+  --side-padding: 20px;
+
+  @include maxWidthMd {
+    --main-wrapper-padding: 0px 46px;
+  }
+
+  @include maxWidthSm {
+    --main-wrapper-padding: 0px 42px;
+  }
+
+  @include maxWidthXs {
+    --main-wrapper-padding: 0px 24px;
+  }
+
+  --font-main: 'Poppins', sans-serif;
+
+  --black: #171c28;
+  --white: #ffffff;
+  --text-muted: #909090;
+  --grey9: #f9f9f9;
+  --grey1: #f1f1f1;
+
+  --transition-m: all 250ms cubic-bezier(.39, .575, .565, 1);
+  --transition-l: all 350ms cubic-bezier(.39, .575, .565, 1);
+  --transition-s: all 175ms cubic-bezier(.39, .575, .565, 1);
+}

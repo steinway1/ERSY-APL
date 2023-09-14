@@ -1,0 +1,23 @@
+{
+  "allSongs": {
+    "select": [
+      {"value": "popular", "caption": "Most Popular"},
+      {"value": "recent", "caption": "Newest First"},
+      {"value": "oldest", "caption": "Oldest First"}
+    ]
+  },
+  "videos": {
+    "select": [
+      {"value": "popular", "caption": "Most Popular"},
+      {"value": "recent", "caption": "Newest First"},
+      {"value": "oldest", "caption": "Oldest First"}
+    ]
+  },
+  "merch": {
+    "select": [
+      {"value": "low-high", "caption": "Low - High"},
+      {"value": "high-low", "caption": "High - Low"},
+      {"value": "popular", "caption": "Most Popular"}
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "songItem": {
+    "imgUrl": "./assets/song-cover.jpeg",
+    "name": "I'll Be Home For Christmas (Official Audio)",
+    "subName": "Camila Cabello"
+  },
+  "videoItem": {
+    "imgUrl": "./assets/video-sample.jpeg",
+    "name": "Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)",
+    "subName": "CamilaCabelloVEVO",
+    "date": "13 JUNE, 2023",
+    "views": "308K"
+  },
+  "merchItem": {
+    "imgUrl": "./assets/merch-sample.png",
+    "name": "Romance v2.0 T-shirt Pink Rose",
+    "price": "$68 USD"
+  },
+  "albumItem": {
+    "imgUrl": "./assets/album-sample.png",
+    "name": "Radio 1's Live Lounge",
+    "subName": "Released on 04 Aug, 2022",
+    "label": "Epic"
+  }
+}

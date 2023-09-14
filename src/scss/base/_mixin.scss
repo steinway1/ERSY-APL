@@ -1,0 +1,29 @@
+// media aliases and breakpoints
+$screen-xs-max: 479px;
+$screen-xs-min: 320px;
+
+$screen-sm-max: 767px;
+$screen-sm-min: 568px;
+
+$screen-md-max: 991px;
+$screen-md-min: 768px;
+
+// media devices
+
+@mixin maxWidthXs {
+  @media screen and (max-width: #{$screen-xs-max}) {
+    @content
+  }
+};
+
+@mixin maxWidthSm {
+  @media screen and (max-width: #{$screen-sm-max}) {
+    @content
+  }
+};
+
+@mixin maxWidthMd {
+  @media screen and (max-width: #{$screen-md-max}) {
+    @content
+  }
+};

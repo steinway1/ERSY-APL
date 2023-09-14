@@ -1,0 +1,12 @@
+{
+  "page_default_title": "ERSY Artist Application",
+  "page_default_description": "",
+  "page_default_keywords": [""],
+  "svgStorage": "",
+  "artist": {
+    "name": "Camila Cabello",
+    "realName": "Karla Camila Cabello Estrabao",
+    "bornPlace": "Cojímar, Havana, Cuba",
+    "bornDate": "March 03, 1997"
+  }
+}

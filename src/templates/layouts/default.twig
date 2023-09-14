@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		{% include '../page-components/head.twig' %}
+		{{ block('include_head') }}
+    <link rel="stylesheet" href="{{foo}}">
+	</head>
+
+	<body>
+
+		{% block content %}{% endblock %}
+
+		{% include "../page-components/scripts.twig" %}
+		{{ block('include_script') }}
+	</body>
+
+</html>
