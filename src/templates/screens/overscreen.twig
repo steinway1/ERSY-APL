@@ -1,0 +1,120 @@
+<div
+	class="apl-over hidden">
+
+	<!-- #region Over screen : SEARCH -->
+	<div id="overSearch" class="apl-over-screen">
+		<div
+			class="apl-over__wrapper">
+			{# Header #}
+			<div class="apl-sticky-head">
+				{% include "../elements/search-form.twig" with {
+        placeholder: "Search for songs, videos, etc...",
+        id: "overSearchForm",
+        inputID: "overSearchInput"
+      } %}
+				<button data-evt="toggleSearch" class="apl-menu__close-btn">
+					{% include "../svg/close.svg" %}
+				</button>
+			</div>
+
+			{# Content #}
+			<div class="apl-over__body apl-over__grey">
+				<div class="search-box">
+					{# <span class="search-box__pseudo-type">Start typing to find anything...</span> #}
+
+					{# Songs #}
+					<div class="search-row">
+						<div class="search-row__header">
+							<span class="search-row__title">Songs</span>
+							<span class="search-row__count">0</span>
+						</div>
+						<div class="search-row__body">
+							{% for i in 1..5 %}
+								{% include "../elements/song-item.twig" %}
+							{% endfor %}
+						</div>
+						<div class="search-row__footer">
+							<a href="#" class="search-row__btn">Show results</a>
+						</div>
+					</div>
+
+					{# Videos #}
+					<div class="search-row">
+						<div class="search-row__header">
+							<span class="search-row__title">Music Videos</span>
+							<span class="search-row__count">0</span>
+						</div>
+						<div class="search-row__body">
+							<div class="search-row__scroll">
+								{% for i in 1..5 %}
+									{% include "../elements/video-item.twig" %}
+								{% endfor %}
+							</div>
+						</div>
+						<div class="search-row__footer">
+							<a href="#" class="search-row__btn">Show results</a>
+						</div>
+					</div>
+
+					{# Albums #}
+					<div class="search-row">
+						<div class="search-row__header">
+							<span class="search-row__title">Albums</span>
+							<span class="search-row__count">0</span>
+						</div>
+						<div class="search-row__body">
+							<div class="search-row__albums">
+								{% for i in 1..3 %}
+									{% include "../elements/album-item.twig" %}
+								{% endfor %}
+							</div>
+						</div>
+						<div class="search-row__footer">
+							<a href="#" class="search-row__btn">Show results</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- #endregion -->
+
+
+	<!-- #region Over screen : MENU -->
+	<div id="overMenu" class="apl-over-screen hidden">
+		<div class="apl-over__wrapper">
+			<div class="apl-over__body">
+				<div class="apl-menu">
+					<button data-evt="toggleMenu" class="apl-menu__close-btn">
+						{% include "../svg/close.svg" %}
+					</button>
+
+					<div class="apl-app-mark">
+						<img src="./assets/artist-main.webp" loading="eager" alt="">
+						<h2>Camila Cabello App</h2>
+						<span>Powered by ERSY</span>
+					</div>
+					<div class="apl-menu__tabs">
+						{% for item in menu %}
+							{% if loop.first %}
+								<a href="{{item.href}}" class="apl-menu-tab is-active">{{item.caption}}</a>
+							{% else %}
+								<a href="{{item.href}}" class="apl-menu-tab">{{item.caption}}</a>
+							{% endif %}
+						{% endfor %}
+					</div>
+					<div class="apl-menu__socials">
+						<img src="./assets/Youtube.svg" loading="eager">
+						<img src="./assets/TikTok.svg" loading="eager">
+						<img src="./assets/Twitter.svg" loading="eager">
+						<img src="./assets/Facebook.svg" loading="eager">
+						<img src="./assets/Instagram.svg" loading="eager">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- #endregion -->
+
+</div>

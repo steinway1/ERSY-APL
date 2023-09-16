@@ -75,6 +75,8 @@
   padding: 6px 0;
   display: flex;
   position: relative;
+  transition: all 375ms ease;
+
   svg {
     width: 20px !important;
     height: 20px !important;
@@ -255,6 +257,7 @@
   width: 100vw;
   background-color: #e4e4e4;
   position: relative;
+  transition: all 475ms ease;
 
   @include maxWidthSm {
     background-color: var(--white);
@@ -656,6 +659,10 @@
   &.apl-main-btn_play {
     color: var(--white);
     background-color: var(--black);
+
+    .eff_ripple-circle {
+      background: rgba(255, 255, 255, 0.421);
+    }
   }
 
   svg {
@@ -763,42 +770,6 @@
     font-size: 9px;
     line-height: 14px;
     display: block;
-  }
-}
-
-.eff_ripple-circle {
-  display: block;
-  position: absolute !important;
-  background: rgb(229 229 229 / 85%);
-  border-radius: 50%;
-  transform: scale(0);
-}
-
-.product-option__head .eff_ripple-circle.ripple-circle_animated {
-  -webkit-animation: rippleEffect 0.6s linear;
-  animation: rippleEffect 0.6s linear;
-}
-
-.product-option__head .eff_ripple-circle {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.eff_ripple-circle.ripple-circle_animated {
-  -webkit-animation: rippleEffect 0.32s linear;
-  animation: rippleEffect 0.32s linear;
-}
-
-@-webkit-keyframes rippleEffect {
-  100% {
-    opacity: 0;
-    transform: scale(2.5);
-  }
-}
-
-@keyframes rippleEffect {
-  100% {
-    opacity: 0;
-    transform: scale(2.5);
   }
 }
 

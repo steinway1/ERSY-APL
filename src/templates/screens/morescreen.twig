@@ -1,0 +1,173 @@
+<div class="apl-more">
+	<div class="apl-more-holder">
+		<div
+			class="apl-more-container">
+			{# Songs #}
+			<div id="moreSongs" class="apl-more-screen">
+				<div class="apl-more__wrapper">
+					<div class="apl-sticky-head">
+						<div class="apl-flex-between">
+							<button data-apl-more class="apl-header-icon">
+								{% include "../svg/back.svg" %}
+							</button>
+							<h5 class="apl-screen-title">All Songs</h5>
+							<button data-more-evt="filterContent" class="apl-header-icon">
+								{% include '../svg/filter.svg' %}
+							</button>
+						</div>
+					</div>
+					<div class="apl-more__body">
+						<div class="apl-more__search-box">
+							{% include "../elements/search-form.twig" with {placeholder: 'Search any song...'} %}
+						</div>
+						<div class="apl-more__total-typo">182 Songs Total</div>
+						<div>
+							{% for item in 0..10 %}
+								{% include "../elements/song-item.twig" %}
+							{% endfor %}
+						</div>
+						{% include "../elements/screen-loader.twig" %}
+					</div>
+					<div class="screen-modal">
+						<div class="screen-modal__backdrop"></div>
+						<div class="screen-modal__container">
+							<div class="screen-modal__head">
+								<span class="apl-screen-title">Filter Songs</span>
+								<button class="screen-modal__close-btn">
+									{% include "../svg/close.svg" %}
+								</button>
+							</div>
+							<div class="screen-modal__body">
+								<div class="screen-modal__filters-wrap">
+									<button class="filter-btn is-active">Popular First</button>
+									<button class="filter-btn">Newest First</button>
+									<button class="filter-btn">Oldest First</button>
+									<button class="filter-btn">Alphabetically</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{# Videos #}
+			<div id="moreVideos" class="apl-more-screen">
+				<div class="apl-more__wrapper">
+					<div class="apl-sticky-head">
+						<div class="apl-flex-between">
+							<button data-apl-more class="apl-header-icon">
+								{% include "../svg/back.svg" %}
+							</button>
+							<h5 class="apl-screen-title">Music Videos</h5>
+							<button data-more-evt="filterContent" class="apl-header-icon">
+								{% include '../svg/filter.svg' %}
+							</button>
+						</div>
+					</div>
+					<div class="apl-more__body">
+						<div class="apl-more__search-box">
+							{% include "../elements/search-form.twig" with {placeholder: 'Search any video...'} %}
+						</div>
+						<div class="apl-more__total-typo">487 Music Videos</div>
+						<div class="apl-more__main-box main-box_videos">
+							{% for item in 0..12 %}
+								{% include "../elements/video-item.twig" %}
+							{% endfor %}
+						</div>
+						{% include "../elements/screen-loader.twig" %}
+					</div>
+					<div class="screen-modal">
+						<div class="screen-modal__backdrop"></div>
+						<div class="screen-modal__container">
+							<div class="screen-modal__head">
+								<span class="apl-screen-title">Filter Videos</span>
+								<button class="screen-modal__close-btn">
+									{% include "../svg/close.svg" %}
+								</button>
+							</div>
+							<div class="screen-modal__body">
+								<div class="screen-modal__filters-wrap">
+									<button class="filter-btn is-active">Most Views</button>
+									<button class="filter-btn">Latest Uploaded</button>
+									<button class="filter-btn">Oldest First</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{# Merch #}
+			<div id="moreMerch" class="apl-more-screen">
+				<div class="apl-more__wrapper">
+					<div class="apl-sticky-head">
+						<div class="apl-flex-between">
+							<button data-apl-more class="apl-header-icon">
+								{% include "../svg/back.svg" %}
+							</button>
+							<h5 class="apl-screen-title">Merch</h5>
+							<button data-more-evt="filterContent" class="apl-header-icon">
+								{% include '../svg/filter.svg' %}
+							</button>
+						</div>
+					</div>
+					<div class="apl-more__body">
+						<div class="apl-more__total-typo">9 Merch Items</div>
+						<div class="apl-more__main-box">
+							<div class="apl-merch-grid">
+								{% for i in 0..3 %}
+									{% include "../elements/merch-item.twig" %}
+								{% endfor %}
+							</div>
+						</div>
+						{% include "../elements/screen-loader.twig" %}
+					</div>
+					<div class="screen-modal">
+						<div class="screen-modal__backdrop"></div>
+						<div class="screen-modal__container">
+							<div class="screen-modal__head">
+								<span class="apl-screen-title">Filter Videos</span>
+								<button class="screen-modal__close-btn">
+									{% include "../svg/close.svg" %}
+								</button>
+							</div>
+							<div class="screen-modal__body">
+								<div class="screen-modal__filters-wrap">
+									<button class="filter-btn is-active">Low - High Price</button>
+									<button class="filter-btn">High - Low Price</button>
+									<button class="filter-btn">Best Sellers</button>
+									<button class="filter-btn">Most Popular</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{# Albums #}
+			<div id="moreAlbums" class="apl-more-screen">
+				<div class="apl-more__wrapper">
+					<div class="apl-sticky-head">
+						<div class="apl-flex-between">
+							<button data-apl-more class="apl-header-icon">
+								{% include "../svg/back.svg" %}
+							</button>
+							<h5 class="apl-screen-title">Music Albums</h5>
+						</div>
+					</div>
+					<div class="apl-more__body">
+						<div class="apl-more__total-typo">8 Albums</div>
+						<div class="apl-more__main-box">
+							<div class="apl-albums-grid">
+								{% for i in 0..3 %}
+									{% include "../elements/album-item.twig" %}
+								{% endfor %}
+							</div>
+							<a href="#" class="apl-more__volunteer-btn">Become a Volunteer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

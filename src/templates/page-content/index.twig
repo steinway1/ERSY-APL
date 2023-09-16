@@ -1,4 +1,6 @@
 <!-- Main Screen -->
+{% include "../screens/overscreen.twig" %}
+
 <div class="apl-content">
 	<div class="apl-area">
 		<div
@@ -8,21 +10,14 @@
 			<header class="apl-sticky-head">
 				<div class="apl-flex-between">
 
-					<button data-apl-evt="toggleMenu" class="apl-header-icon">
-						<svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M0 4H13" stroke="currentColor" stroke-width="1.5"></path>
-							<path d="M0 12H24" stroke="currentColor" stroke-width="1.5"></path>
-							<path d="M0 20H18" stroke="currentColor" stroke-width="1.5"></path>
-						</svg>
+					<button data-evt="toggleMenu" class="apl-header-icon">
+						{% include "../svg/menu.svg" %}
 					</button>
 
 					<span class="apl-screen-title">{{artist.name}}</span>
 
-					<button data-apl-evt="toggleSearch" class="apl-header-icon">
-						<svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M23 23L17 17" stroke="currentColor" stroke-width="1.5"></path>
-							<circle cx="10.5" cy="10.5" r="9.5" stroke="currentColor" stroke-width="1.5"></circle>
-						</svg>
+					<button data-evt="toggleSearch" class="apl-header-icon">
+						{% include "../svg/search.svg" %}
 					</button>
 
 				</div>
@@ -49,27 +44,13 @@
 				<!-- Artist : MAIN CONTROLS -->
 				<div class="apl-controls-group">
 					<button class="apl-main-btn">
-						<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M14.0002 3L16.4402 5.34003L8.49023 5.32001C4.92023 5.32001 1.99023 8.25003 1.99023 11.84C1.99023 13.63 2.72022 15.26 3.90022 16.44" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-							<path d="M10.0001 21L7.56006 18.66L15.5101 18.68C19.0801 18.68 22.0101 15.75 22.0101 12.16C22.0101 10.37 21.2801 8.74 20.1001 7.56" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-							<path d="M9 12H15" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
+						{% include "../svg/shuffle.svg" %}
 					</button>
 					<button class="apl-main-btn apl-main-btn_play">
-						<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M3.76001 7.21999V16.79C3.76001 18.75 5.89 19.98 7.59 19L11.74 16.61L15.89 14.21C17.59 13.23 17.59 10.78 15.89 9.79998L11.74 7.39998L7.59 5.01C5.89 4.03 3.76001 5.24999 3.76001 7.21999Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-							<path d="M20.2402 18.18V5.82001" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
+						{% include "../svg/play.svg" %}
 					</button>
 					<button class="apl-main-btn">
-						<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M16.96 6.17C18.96 7.56 20.34 9.77 20.62 12.32" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-							<path d="M3.48999 12.37C3.74999 9.83 5.10999 7.62 7.08999 6.22" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-							<path d="M8.18994 20.94C9.34994 21.53 10.6699 21.86 12.0599 21.86C13.3999 21.86 14.6599 21.56 15.7899 21.01" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-							<path d="M12.06 7.7C13.5954 7.7 14.84 6.45535 14.84 4.92C14.84 3.38465 13.5954 2.14 12.06 2.14C10.5247 2.14 9.28003 3.38465 9.28003 4.92C9.28003 6.45535 10.5247 7.7 12.06 7.7Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-							<path d="M4.83005 19.92C6.3654 19.92 7.61005 18.6754 7.61005 17.14C7.61005 15.6046 6.3654 14.36 4.83005 14.36C3.2947 14.36 2.05005 15.6046 2.05005 17.14C2.05005 18.6754 3.2947 19.92 4.83005 19.92Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-							<path d="M19.1699 19.92C20.7052 19.92 21.9499 18.6754 21.9499 17.14C21.9499 15.6046 20.7052 14.36 19.1699 14.36C17.6345 14.36 16.3899 15.6046 16.3899 17.14C16.3899 18.6754 17.6345 19.92 19.1699 19.92Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-						</svg>
+						{% include "../svg/share.svg" %}
 					</button>
 				</div>
 			</div>
@@ -82,15 +63,11 @@
 
 				<!-- Main : SEARCH -->
 				<div class="apl-wrap-area">
-					<form method="get" class="apl-search-form">
-						<input type="text" class="apl-search-field" data-apl-evt="toggleSearch" placeholder="Explore Camila Cabello...">
-						<span class="apl-search-icon">
-							<svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M23 23L17 17" stroke="currentColor" stroke-width="1.5"></path>
-								<circle cx="10.5" cy="10.5" r="9.5" stroke="currentColor" stroke-width="1.5"></circle>
-							</svg>
-						</span>
-					</form>
+					{% include "../elements/search-form.twig" with {
+          placeholder: "Search Camila Cabello...",
+          id: "mainSearchForm",
+          inputID: "mainSearchInput"
+        } %}
 				</div>
 
 				<!-- Main : CONTENT -->
@@ -127,9 +104,7 @@
 							<div class="apl-row-footer__wrapper">
 								<div class="apl-pag">
 									<button class="apl-pag__arrow is-flipped">
-										<svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-										</svg>
+										{% include "../svg/arrow-next.svg" %}
 									</button>
 									<button class="apl-pag__btn is-active">1</button>
 									<button class="apl-pag__btn">2</button>
@@ -138,16 +113,12 @@
 									<button class="apl-pag__btn">...</button>
 									<button class="apl-pag__btn">14</button>
 									<button class="apl-pag__arrow">
-										<svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-										</svg>
+										{% include "../svg/arrow-next.svg" %}
 									</button>
 								</div>
-								<button class="apl-row-btn">
+								<button data-apl-more="songs" class="apl-row-btn">
 									178 More Songs
-									<svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-									</svg>
+									{% include "../svg/follow.svg" %}
 								</button>
 							</div>
 						</div>
@@ -200,9 +171,7 @@
 
 								<button class="apl-scroll-btn">
 									More
-									<svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-									</svg>
+									{% include "../svg/follow.svg" %}
 								</button>
 								<div class="apl-scroll-space"></div>
 							</div>
@@ -210,11 +179,9 @@
 
 						<div class="apl-row-footer">
 							<div class="apl-row-footer__wrapper">
-								<button class="apl-row-btn">
+								<button data-apl-more="videos" class="apl-row-btn">
 									42 More Videos
-									<svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-									</svg>
+									{% include "../svg/follow.svg" %}
 								</button>
 							</div>
 						</div>
@@ -251,9 +218,7 @@
 							<div class="apl-row-footer__wrapper">
 								<div class="apl-pag">
 									<button class="apl-pag__arrow is-flipped">
-										<svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-										</svg>
+										{% include "../svg/arrow-next.svg" %}
 									</button>
 									<button class="apl-pag__btn is-active">1</button>
 									<button class="apl-pag__btn">2</button>
@@ -262,16 +227,12 @@
 									<button class="apl-pag__btn">...</button>
 									<button class="apl-pag__btn">14</button>
 									<button class="apl-pag__arrow">
-										<svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-										</svg>
+										{% include "../svg/arrow-next.svg" %}
 									</button>
 								</div>
-								<button class="apl-row-btn">
+								<button data-apl-more="merch" class="apl-row-btn">
 									Explore Merch
-									<svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-									</svg>
+									{% include "../svg/follow.svg" %}
 								</button>
 							</div>
 						</div>
@@ -296,11 +257,9 @@
 
 						<div class="apl-row-footer">
 							<div class="apl-row-footer__wrapper">
-								<button class="apl-row-btn">
-									42 More Videos
-									<svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-									</svg>
+								<button data-apl-more="albums" class="apl-row-btn">
+									3 More Music Albums
+									{% include "../svg/follow.svg" %}
 								</button>
 							</div>
 						</div>
@@ -321,9 +280,7 @@
 							<div class="apl-row-footer__wrapper">
 								<button class="apl-row-btn apl-row-btn_x">
 									Go To<span>X</span>
-									<svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-									</svg>
+									{% include "../svg/follow.svg" %}
 								</button>
 							</div>
 						</div>
@@ -368,9 +325,7 @@
 							<div class="apl-row-footer__wrapper">
 								<button class="apl-row-btn">
 									Go To Gallery
-									<svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-									</svg>
+									{% include "../svg/follow.svg" %}
 								</button>
 							</div>
 						</div>
@@ -434,3 +389,5 @@
 		</div>
 	</div>
 </div>
+
+{% include "../screens/morescreen.twig" %}

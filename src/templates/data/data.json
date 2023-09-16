@@ -8,5 +8,13 @@
     "realName": "Karla Camila Cabello Estrabao",
     "bornPlace": "Cojímar, Havana, Cuba",
     "bornDate": "March 03, 1997"
-  }
+  },
+  "menu": [
+    {"caption":"Home", "href": "#"},
+    {"caption":"All Songs", "href": "#"},
+    {"caption":"Music Videos", "href": "#"},
+    {"caption":"Merch", "href": "#"},
+    {"caption":"Albums", "href": "#"},
+    {"caption":"Gallery", "href": "#"}
+  ]
 }

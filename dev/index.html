@@ -2,697 +2,1601 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERSY Artist Application</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERSY Artist Application</title>
 
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="robots" content="index follow">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="robots" content="index follow">
 
-    <link rel="stylesheet" href="css/default.css" />
-    <link rel="stylesheet" href="css/partial.css" />
+  <link rel="stylesheet" href="css/default.css" />
+  <link rel="stylesheet" href="css/partial.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="theme-color" content="#ffffff">
 
 
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
-    <link rel="shortcut icon" type="img/png" href="assets/favicons/favicon-16.png" />
-    <link rel="shortcut icon" type="img/png" href="assets/favicons/favicon-32.png" />
-    <link rel="apple-touch-icon" href="assets/favicons/touch-icon-ipad.png" />
-    <link rel="apple-touch-icon" href="assets/favicons/touch-icon-iphone-retina.png" />
+  <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+  <link rel="shortcut icon" type="img/png" href="assets/favicons/favicon-16.png" />
+  <link rel="shortcut icon" type="img/png" href="assets/favicons/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/favicons/touch-icon-ipad.png" />
+  <link rel="apple-touch-icon" href="assets/favicons/touch-icon-iphone-retina.png" />
 
-    <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="">
 </head>
 
 <body>
 
-    <!-- Main Screen -->
-    <div class="apl-content">
-        <div class="apl-area">
-            <div class="apl-screen">
+  <!-- Main Screen -->
+  <div class="apl-over hidden">
 
-                <!-- #region  Main : HEADER -->
-                <header class="apl-sticky-head">
-                    <div class="apl-flex-between">
+    <!-- #region Over screen : SEARCH -->
+    <div id="overSearch" class="apl-over-screen">
+      <div class="apl-over__wrapper">
 
-                        <button data-apl-evt="toggleMenu" class="apl-header-icon">
-                            <svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 4H13" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M0 12H24" stroke="currentColor" stroke-width="1.5"></path>
-                                <path d="M0 20H18" stroke="currentColor" stroke-width="1.5"></path>
-                            </svg>
-                        </button>
-
-                        <span class="apl-screen-title">Camila Cabello</span>
-
-                        <button data-apl-evt="toggleSearch" class="apl-header-icon">
-                            <svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M23 23L17 17" stroke="currentColor" stroke-width="1.5"></path>
-                                <circle cx="10.5" cy="10.5" r="9.5" stroke="currentColor" stroke-width="1.5"></circle>
-                            </svg>
-                        </button>
-
-                    </div>
-                </header>
-                <!-- #endregion -->
-
-
-                <!-- #region ARTIST -->
-                <div class="apl-artist-media">
-                    <div class="apl-artist-welcome">
-                        <img src="./assets/artist-main.webp" loading="eager" alt="">
-                        <div>
-                            <h1 class="apl-heading">Camila Cabello</h1>
-                            <p class="apl-subheading">Real name is
-                                <span>Karla Camila Cabello Estrabao</span>
-                                was born in
-                                <span>Cojímar, Havana, Cuba</span>
-                                on
-                                <span>March 03, 1997</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Artist : MAIN CONTROLS -->
-                    <div class="apl-controls-group">
-                        <button class="apl-main-btn">
-                            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.0002 3L16.4402 5.34003L8.49023 5.32001C4.92023 5.32001 1.99023 8.25003 1.99023 11.84C1.99023 13.63 2.72022 15.26 3.90022 16.44" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M10.0001 21L7.56006 18.66L15.5101 18.68C19.0801 18.68 22.0101 15.75 22.0101 12.16C22.0101 10.37 21.2801 8.74 20.1001 7.56" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M9 12H15" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
-                        <button class="apl-main-btn apl-main-btn_play">
-                            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.76001 7.21999V16.79C3.76001 18.75 5.89 19.98 7.59 19L11.74 16.61L15.89 14.21C17.59 13.23 17.59 10.78 15.89 9.79998L11.74 7.39998L7.59 5.01C5.89 4.03 3.76001 5.24999 3.76001 7.21999Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M20.2402 18.18V5.82001" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
-                        <button class="apl-main-btn">
-                            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.96 6.17C18.96 7.56 20.34 9.77 20.62 12.32" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M3.48999 12.37C3.74999 9.83 5.10999 7.62 7.08999 6.22" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M8.18994 20.94C9.34994 21.53 10.6699 21.86 12.0599 21.86C13.3999 21.86 14.6599 21.56 15.7899 21.01" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M12.06 7.7C13.5954 7.7 14.84 6.45535 14.84 4.92C14.84 3.38465 13.5954 2.14 12.06 2.14C10.5247 2.14 9.28003 3.38465 9.28003 4.92C9.28003 6.45535 10.5247 7.7 12.06 7.7Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M4.83005 19.92C6.3654 19.92 7.61005 18.6754 7.61005 17.14C7.61005 15.6046 6.3654 14.36 4.83005 14.36C3.2947 14.36 2.05005 15.6046 2.05005 17.14C2.05005 18.6754 3.2947 19.92 4.83005 19.92Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M19.1699 19.92C20.7052 19.92 21.9499 18.6754 21.9499 17.14C21.9499 15.6046 20.7052 14.36 19.1699 14.36C17.6345 14.36 16.3899 15.6046 16.3899 17.14C16.3899 18.6754 17.6345 19.92 19.1699 19.92Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <!-- #endregion -->
-
-
-                <!-- Main : CONTENT -->
-                <div class="apl-main-content">
-
-                    <!-- Main : SEARCH -->
-                    <div class="apl-wrap-area">
-                        <form method="get" class="apl-search-form">
-                            <input type="text" class="apl-search-field" data-apl-evt="toggleSearch" placeholder="Explore Camila Cabello...">
-                            <span class="apl-search-icon">
-							<svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M23 23L17 17" stroke="currentColor" stroke-width="1.5"></path>
-								<circle cx="10.5" cy="10.5" r="9.5" stroke="currentColor" stroke-width="1.5"></circle>
-							</svg>
-						</span>
-                        </form>
-                    </div>
-
-                    <!-- Main : CONTENT -->
-                    <div class="apl-artist-content">
-
-                        <!-- Section : SONGS -->
-                        <section class="apl-row">
-
-                            <div class="apl-row-head">
-                                <div class="apl-flex-between">
-                                    <h3 class="apl-row-title">All Songs</h3>
-                                    <form class="apl-select-form" action="" method="post">
-                                        <div class="apl-select-wrap">
-                                            <select name="" id="">
-                                                <option value="popular">Most Popular</option>
-                                                <option value="recent">Newest First</option>
-                                                <option value="oldest">Oldest First</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-
-                            <div class="apl-row-body">
-                                <div class="apl-song">
-                                    <div class="apl-song__wrapper">
-                                        <div class="apl-song__media">
-                                            <img src="./assets/song-cover.jpeg" loading="eager" alt="">
-                                        </div>
-                                        <div class="apl-song__details">
-                                            <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
-                                            <span class="apl-item-subname">Camila Cabello</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="apl-song">
-                                    <div class="apl-song__wrapper">
-                                        <div class="apl-song__media">
-                                            <img src="./assets/song-cover.jpeg" loading="eager" alt="">
-                                        </div>
-                                        <div class="apl-song__details">
-                                            <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
-                                            <span class="apl-item-subname">Camila Cabello</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="apl-song">
-                                    <div class="apl-song__wrapper">
-                                        <div class="apl-song__media">
-                                            <img src="./assets/song-cover.jpeg" loading="eager" alt="">
-                                        </div>
-                                        <div class="apl-song__details">
-                                            <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
-                                            <span class="apl-item-subname">Camila Cabello</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="apl-song">
-                                    <div class="apl-song__wrapper">
-                                        <div class="apl-song__media">
-                                            <img src="./assets/song-cover.jpeg" loading="eager" alt="">
-                                        </div>
-                                        <div class="apl-song__details">
-                                            <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
-                                            <span class="apl-item-subname">Camila Cabello</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="apl-song">
-                                    <div class="apl-song__wrapper">
-                                        <div class="apl-song__media">
-                                            <img src="./assets/song-cover.jpeg" loading="eager" alt="">
-                                        </div>
-                                        <div class="apl-song__details">
-                                            <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
-                                            <span class="apl-item-subname">Camila Cabello</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="apl-row-footer">
-                                <div class="apl-row-footer__wrapper">
-                                    <div class="apl-pag">
-                                        <button class="apl-pag__arrow is-flipped">
-                                            <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-                                            </svg>
-                                        </button>
-                                        <button class="apl-pag__btn is-active">1</button>
-                                        <button class="apl-pag__btn">2</button>
-                                        <button class="apl-pag__btn">3</button>
-                                        <button class="apl-pag__btn">4</button>
-                                        <button class="apl-pag__btn">...</button>
-                                        <button class="apl-pag__btn">14</button>
-                                        <button class="apl-pag__arrow">
-                                            <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <button class="apl-row-btn">
-                                        178 More Songs
-                                        <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Section : VIDEOS -->
-                        <section class="apl-row">
-                            <div class="apl-row-head">
-                                <div class="apl-flex-between">
-                                    <h3 class="apl-row-title">Music Videos</h3>
-                                    <form class="apl-select-form" action="" method="post">
-                                        <div class="apl-select-wrap">
-                                            <select name="" id="">
-                                                <option value="popular">Most Popular</option>
-                                                <option value="recent">Newest First</option>
-                                                <option value="oldest">Oldest First</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="apl-row-body">
-                                <div class="apl-row__scroll-content">
-
-                                    <div class="apl-video-col">
-                                        <div class="apl-video">
-                                            <div class="apl-video__media">
-                                                <img src="./assets/video-sample.jpeg" loading="eager" alt="">
-                                            </div>
-                                            <div class="apl-video__details">
-                                                <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
-                                                <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
-                                                <span class="apl-item-subname">CamilaCabelloVEVO</span>
-                                            </div>
-                                        </div>
-                                        <div class="apl-video">
-                                            <div class="apl-video__media">
-                                                <img src="./assets/video-sample.jpeg" loading="eager" alt="">
-                                            </div>
-                                            <div class="apl-video__details">
-                                                <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
-                                                <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
-                                                <span class="apl-item-subname">CamilaCabelloVEVO</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="apl-video-col">
-                                        <div class="apl-video">
-                                            <div class="apl-video__media">
-                                                <img src="./assets/video-sample.jpeg" loading="eager" alt="">
-                                            </div>
-                                            <div class="apl-video__details">
-                                                <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
-                                                <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
-                                                <span class="apl-item-subname">CamilaCabelloVEVO</span>
-                                            </div>
-                                        </div>
-                                        <div class="apl-video">
-                                            <div class="apl-video__media">
-                                                <img src="./assets/video-sample.jpeg" loading="eager" alt="">
-                                            </div>
-                                            <div class="apl-video__details">
-                                                <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
-                                                <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
-                                                <span class="apl-item-subname">CamilaCabelloVEVO</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="apl-video-col">
-                                        <div class="apl-video">
-                                            <div class="apl-video__media">
-                                                <img src="./assets/video-sample.jpeg" loading="eager" alt="">
-                                            </div>
-                                            <div class="apl-video__details">
-                                                <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
-                                                <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
-                                                <span class="apl-item-subname">CamilaCabelloVEVO</span>
-                                            </div>
-                                        </div>
-                                        <div class="apl-video">
-                                            <div class="apl-video__media">
-                                                <img src="./assets/video-sample.jpeg" loading="eager" alt="">
-                                            </div>
-                                            <div class="apl-video__details">
-                                                <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
-                                                <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
-                                                <span class="apl-item-subname">CamilaCabelloVEVO</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="apl-video-col">
-                                        <div class="apl-video">
-                                            <div class="apl-video__media">
-                                                <img src="./assets/video-sample.jpeg" loading="eager" alt="">
-                                            </div>
-                                            <div class="apl-video__details">
-                                                <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
-                                                <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
-                                                <span class="apl-item-subname">CamilaCabelloVEVO</span>
-                                            </div>
-                                        </div>
-                                        <div class="apl-video">
-                                            <div class="apl-video__media">
-                                                <img src="./assets/video-sample.jpeg" loading="eager" alt="">
-                                            </div>
-                                            <div class="apl-video__details">
-                                                <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
-                                                <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
-                                                <span class="apl-item-subname">CamilaCabelloVEVO</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <button class="apl-scroll-btn">
-                                        More
-                                        <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-                                        </svg>
-                                    </button>
-                                    <div class="apl-scroll-space"></div>
-                                </div>
-                            </div>
-
-                            <div class="apl-row-footer">
-                                <div class="apl-row-footer__wrapper">
-                                    <button class="apl-row-btn">
-                                        42 More Videos
-                                        <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Section : MERCH -->
-                        <section class="apl-row">
-                            <div class="apl-row-head">
-                                <div class="apl-flex-between">
-                                    <h3 class="apl-row-title">Shop Merch</h3>
-                                    <form class="apl-select-form" action="" method="post">
-                                        <div class="apl-select-wrap">
-                                            <select name="" id="">
-                                                <option value="low-high">Low - High</option>
-                                                <option value="high-low">High - Low</option>
-                                                <option value="popular">Most Popular</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-
-                            <div class="apl-row-body">
-                                <div class="apl-merch-grid">
-                                    <div class="apl-merch">
-                                        <div class="apl-merch__media">
-                                            <img src="./assets/merch-sample.png" loading="lazy" alt="">
-                                            <span class="apl-merch-tag">STOCK</span>
-                                        </div>
-                                        <div class="apl-merch__details">
-                                            <div class="apl-item-name">Romance v2.0 T-shirt Pink Rose</div>
-                                            <div class="apl-item-price">$68 USD</div>
-                                        </div>
-                                    </div>
-                                    <div class="apl-merch">
-                                        <div class="apl-merch__media">
-                                            <img src="./assets/merch-sample.png" loading="lazy" alt="">
-                                            <span class="apl-merch-tag">STOCK</span>
-                                        </div>
-                                        <div class="apl-merch__details">
-                                            <div class="apl-item-name">Romance v2.0 T-shirt Pink Rose</div>
-                                            <div class="apl-item-price">$68 USD</div>
-                                        </div>
-                                    </div>
-                                    <div class="apl-merch">
-                                        <div class="apl-merch__media">
-                                            <img src="./assets/merch-sample.png" loading="lazy" alt="">
-                                            <span class="apl-merch-tag">STOCK</span>
-                                        </div>
-                                        <div class="apl-merch__details">
-                                            <div class="apl-item-name">Romance v2.0 T-shirt Pink Rose</div>
-                                            <div class="apl-item-price">$68 USD</div>
-                                        </div>
-                                    </div>
-                                    <div class="apl-merch">
-                                        <div class="apl-merch__media">
-                                            <img src="./assets/merch-sample.png" loading="lazy" alt="">
-                                            <span class="apl-merch-tag">STOCK</span>
-                                        </div>
-                                        <div class="apl-merch__details">
-                                            <div class="apl-item-name">Romance v2.0 T-shirt Pink Rose</div>
-                                            <div class="apl-item-price">$68 USD</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="apl-row-footer">
-                                <div class="apl-row-footer__wrapper">
-                                    <div class="apl-pag">
-                                        <button class="apl-pag__arrow is-flipped">
-                                            <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-                                            </svg>
-                                        </button>
-                                        <button class="apl-pag__btn is-active">1</button>
-                                        <button class="apl-pag__btn">2</button>
-                                        <button class="apl-pag__btn">3</button>
-                                        <button class="apl-pag__btn">4</button>
-                                        <button class="apl-pag__btn">...</button>
-                                        <button class="apl-pag__btn">14</button>
-                                        <button class="apl-pag__arrow">
-                                            <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <button class="apl-row-btn">
-                                        Explore Merch
-                                        <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Section : ALBUMS -->
-                        <section class="apl-row">
-                            <div class="apl-row-head">
-                                <div class="apl-flex-between">
-                                    <h3 class="apl-row-title">Music Albums</h3>
-                                </div>
-                            </div>
-                            <div class="apl-row-body">
-                                <div class="apl-wrap">
-                                    <div class="apl-albums-grid">
-                                        <div class="apl-album">
-                                            <div class="apl-album__media">
-                                                <img src="./assets/album-sample.png" loading="lazy" alt="">
-                                            </div>
-                                            <div class="apl-album__details">
-                                                <div class="apl-item-subheading">Epic</div>
-                                                <div class="apl-item-name">Radio 1's Live Lounge</div>
-                                                <div class="apl-item-subname">Released on 04 Aug, 2022</div>
-                                                <div class="apl-album__links">
-                                                    <a href="#" class="apl-album-link">
-                                                        <img src="./assets/spotify-btn.svg" loading="lazy" alt="">
-                                                    </a>
-                                                    <a href="#" class="apl-album-link">
-                                                        <img src="./assets/apple-music-btn.svg" loading="lazy" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="apl-album">
-                                            <div class="apl-album__media">
-                                                <img src="./assets/album-sample.png" loading="lazy" alt="">
-                                            </div>
-                                            <div class="apl-album__details">
-                                                <div class="apl-item-subheading">Epic</div>
-                                                <div class="apl-item-name">Radio 1's Live Lounge</div>
-                                                <div class="apl-item-subname">Released on 04 Aug, 2022</div>
-                                                <div class="apl-album__links">
-                                                    <a href="#" class="apl-album-link">
-                                                        <img src="./assets/spotify-btn.svg" loading="lazy" alt="">
-                                                    </a>
-                                                    <a href="#" class="apl-album-link">
-                                                        <img src="./assets/apple-music-btn.svg" loading="lazy" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="apl-row-footer">
-                                <div class="apl-row-footer__wrapper">
-                                    <button class="apl-row-btn">
-                                        42 More Videos
-                                        <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Section : POSTS -->
-                        <section class="apl-row">
-                            <div class="apl-row-head">
-                                <div class="apl-flex-between">
-                                    <h3 class="apl-row-title apl-row-title_x">POSTS</h3>
-                                </div>
-                            </div>
-                            <div class="apl-row-body">
-                                <div class="apl-empty-row">No active posts yet...</div>
-                            </div>
-
-                            <div class="apl-row-footer">
-                                <div class="apl-row-footer__wrapper">
-                                    <button class="apl-row-btn apl-row-btn_x">
-                                        Go To<span>X</span>
-                                        <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                        </section>
-
-                        <!-- Section : GALLERY -->
-                        <section class="apl-row">
-                            <div class="apl-row-head">
-                                <div class="apl-flex-between justify_center">
-                                    <h3 class="apl-row-title">Gallery
-                                        <span>Explore Camila Cabello's gallery with over than 760 photos</span>
-                                    </h3>
-                                </div>
-                            </div>
-                            <div class="apl-row-body">
-                                <div class="apl-gallery-row">
-
-                                    <div>
-                                        <div class="apl-ticker_left">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                        </div>
-                                        <div class="apl-ticker_left">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                        </div>
-                                        <div class="apl-ticker_left">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="is-flipped">
-                                        <div class="apl-ticker_right">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                        </div>
-                                        <div class="apl-ticker_right">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                        </div>
-                                        <div class="apl-ticker_right">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                            <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="apl-row-footer">
-                                <div class="apl-row-footer__wrapper">
-                                    <button class="apl-row-btn">
-                                        Go To Gallery
-                                        <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Section : FOOTER -->
-                        <footer class="apl-row">
-                            <div class="apl-footer">
-                                <div class="apl-footer__wrapper">
-                                    <div class="apl-app-info">
-                                        <img src="./assets/artist-main.webp" loading="lazy" alt="">
-                                        <span>Camila Cabello</span>
-                                    </div>
-
-                                    <div class="apl-super-grid">
-                                        <div class="apl-social-box">
-                                            <img src="./assets/tiktok.svg" loading="lazy" alt="">
-                                            <span>TikTok<span>3.4 Followers</span>
-                                            </span>
-                                        </div>
-
-                                        <div class="apl-social-box">
-                                            <img src="./assets/youtube.svg" loading="lazy" alt="">
-                                            <span>YouTube<span>
-												1,2M Subscribers</span>
-                                            </span>
-                                        </div>
-
-                                        <div class="apl-social-box">
-                                            <img src="./assets/twitter.svg" loading="lazy" alt="">
-                                            <span>Twitter<span>
-												358K Followers</span>
-                                            </span>
-                                        </div>
-
-                                        <div class="apl-social-box">
-                                            <img src="./assets/facebook.svg" loading="lazy" alt="">
-                                            <span>Facebook<span>
-												358K Followers</span>
-                                            </span>
-                                        </div>
-
-                                        <div class="apl-social-box">
-                                            <img src="./assets/instagram.svg" loading="lazy" alt="">
-                                            <span>Instagram<span>
-												5M FOLLOWERS</span>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div class="apl-powered">
-                                        <span>Powered By</span><img src="./assets/ersy_logo.svg" loading="lazy" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </footer>
-
-                    </div>
-                </div>
-
-            </div>
+        <div class="apl-sticky-head">
+          <form id="overSearchForm" method="get" class="apl-search-form">
+            <input id="overSearchInput" type="text" class="apl-search-field" data-apl-evt=""
+              placeholder="Search for songs, videos, etc...">
+            <span class="apl-search-icon">
+              <svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23 23L17 17" stroke="currentColor" stroke-width="1.5"></path>
+                <circle cx="10.5" cy="10.5" r="9.5" stroke="currentColor" stroke-width="1.5"></circle>
+              </svg>
+            </span>
+          </form>
+          <button data-evt="toggleSearch" class="apl-menu__close-btn">
+            <svg width="16" height="16" viewbox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1.5L25 25.5" stroke="currentColor" stroke-width="2"></path>
+              <path d="M25 1.5L1 25.5" stroke="currentColor" stroke-width="2"></path>
+            </svg> </button>
         </div>
-    </div>
 
-    <script src="./js/jquery.js"></script>
-    <script src="./js/main.js"></script>
+
+        <div class="apl-over__body apl-over__grey">
+          <div class="search-box">
+
+
+
+            <div class="search-row">
+              <div class="search-row__header">
+                <span class="search-row__title">Songs</span>
+                <span class="search-row__count">0</span>
+              </div>
+              <div class="search-row__body">
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-row__footer">
+                <a href="#" class="search-row__btn">Show results</a>
+              </div>
+            </div>
+
+
+            <div class="search-row">
+              <div class="search-row__header">
+                <span class="search-row__title">Music Videos</span>
+                <span class="search-row__count">0</span>
+              </div>
+              <div class="search-row__body">
+                <div class="search-row__scroll">
+                  <div class="apl-video">
+                    <div class="apl-video__media">
+                      <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-video__details">
+                      <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                      <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                      <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                    </div>
+                  </div>
+                  <div class="apl-video">
+                    <div class="apl-video__media">
+                      <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-video__details">
+                      <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                      <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                      <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                    </div>
+                  </div>
+                  <div class="apl-video">
+                    <div class="apl-video__media">
+                      <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-video__details">
+                      <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                      <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                      <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                    </div>
+                  </div>
+                  <div class="apl-video">
+                    <div class="apl-video__media">
+                      <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-video__details">
+                      <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                      <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                      <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                    </div>
+                  </div>
+                  <div class="apl-video">
+                    <div class="apl-video__media">
+                      <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-video__details">
+                      <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                      <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                      <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-row__footer">
+                <a href="#" class="search-row__btn">Show results</a>
+              </div>
+            </div>
+
+
+            <div class="search-row">
+              <div class="search-row__header">
+                <span class="search-row__title">Albums</span>
+                <span class="search-row__count">0</span>
+              </div>
+              <div class="search-row__body">
+                <div class="search-row__albums">
+                  <div class="apl-album">
+                    <div class="apl-album__media">
+                      <img src="./assets/album-sample.png" loading="lazy" alt="">
+                    </div>
+                    <div class="apl-album__details">
+                      <div class="apl-item-subheading">Epic</div>
+                      <div class="apl-item-name">Radio 1's Live Lounge</div>
+                      <div class="apl-item-subname">Released on 04 Aug, 2022</div>
+                      <div class="apl-album__links">
+                        <a href="#" class="apl-album-link">
+                          <img src="./assets/spotify-btn.svg" loading="lazy" alt="">
+                        </a>
+                        <a href="#" class="apl-album-link">
+                          <img src="./assets/apple-music-btn.svg" loading="lazy" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="apl-album">
+                    <div class="apl-album__media">
+                      <img src="./assets/album-sample.png" loading="lazy" alt="">
+                    </div>
+                    <div class="apl-album__details">
+                      <div class="apl-item-subheading">Epic</div>
+                      <div class="apl-item-name">Radio 1's Live Lounge</div>
+                      <div class="apl-item-subname">Released on 04 Aug, 2022</div>
+                      <div class="apl-album__links">
+                        <a href="#" class="apl-album-link">
+                          <img src="./assets/spotify-btn.svg" loading="lazy" alt="">
+                        </a>
+                        <a href="#" class="apl-album-link">
+                          <img src="./assets/apple-music-btn.svg" loading="lazy" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="apl-album">
+                    <div class="apl-album__media">
+                      <img src="./assets/album-sample.png" loading="lazy" alt="">
+                    </div>
+                    <div class="apl-album__details">
+                      <div class="apl-item-subheading">Epic</div>
+                      <div class="apl-item-name">Radio 1's Live Lounge</div>
+                      <div class="apl-item-subname">Released on 04 Aug, 2022</div>
+                      <div class="apl-album__links">
+                        <a href="#" class="apl-album-link">
+                          <img src="./assets/spotify-btn.svg" loading="lazy" alt="">
+                        </a>
+                        <a href="#" class="apl-album-link">
+                          <img src="./assets/apple-music-btn.svg" loading="lazy" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="search-row__footer">
+                <a href="#" class="search-row__btn">Show results</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #endregion -->
+
+
+    <!-- #region Over screen : MENU -->
+    <div id="overMenu" class="apl-over-screen hidden">
+      <div class="apl-over__wrapper">
+        <div class="apl-over__body">
+          <div class="apl-menu">
+            <button data-evt="toggleMenu" class="apl-menu__close-btn">
+              <svg width="16" height="16" viewbox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.5L25 25.5" stroke="currentColor" stroke-width="2"></path>
+                <path d="M25 1.5L1 25.5" stroke="currentColor" stroke-width="2"></path>
+              </svg> </button>
+
+            <div class="apl-app-mark">
+              <img src="./assets/artist-main.webp" loading="eager" alt="">
+              <h2>Camila Cabello App</h2>
+              <span>Powered by ERSY</span>
+            </div>
+            <div class="apl-menu__tabs">
+              <a href="#" class="apl-menu-tab is-active">Home</a>
+              <a href="#" class="apl-menu-tab">All Songs</a>
+              <a href="#" class="apl-menu-tab">Music Videos</a>
+              <a href="#" class="apl-menu-tab">Merch</a>
+              <a href="#" class="apl-menu-tab">Albums</a>
+              <a href="#" class="apl-menu-tab">Gallery</a>
+            </div>
+            <div class="apl-menu__socials">
+              <img src="./assets/Youtube.svg" loading="eager">
+              <img src="./assets/TikTok.svg" loading="eager">
+              <img src="./assets/Twitter.svg" loading="eager">
+              <img src="./assets/Facebook.svg" loading="eager">
+              <img src="./assets/Instagram.svg" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #endregion -->
+
+  </div>
+
+  <div class="apl-content">
+    <div class="apl-area">
+      <div class="apl-screen">
+
+        <!-- #region  Main : HEADER -->
+        <header class="apl-sticky-head">
+          <div class="apl-flex-between">
+
+            <button data-evt="toggleMenu" class="apl-header-icon">
+              <svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 4H13" stroke="currentColor" stroke-width="1.5"></path>
+                <path d="M0 12H24" stroke="currentColor" stroke-width="1.5"></path>
+                <path d="M0 20H18" stroke="currentColor" stroke-width="1.5"></path>
+              </svg> </button>
+
+            <span class="apl-screen-title">Camila Cabello</span>
+
+            <button data-evt="toggleSearch" class="apl-header-icon">
+              <svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23 23L17 17" stroke="currentColor" stroke-width="1.5"></path>
+                <circle cx="10.5" cy="10.5" r="9.5" stroke="currentColor" stroke-width="1.5"></circle>
+              </svg> </button>
+
+          </div>
+        </header>
+        <!-- #endregion -->
+
+
+        <!-- #region ARTIST -->
+        <div class="apl-artist-media">
+          <div class="apl-artist-welcome">
+            <img src="./assets/artist-main.webp" loading="eager" alt="">
+            <div>
+              <h1 class="apl-heading">Camila Cabello</h1>
+              <p class="apl-subheading">Real name is
+                <span>Karla Camila Cabello Estrabao</span>
+                was born in
+                <span>Cojímar, Havana, Cuba</span>
+                on
+                <span>March 03, 1997</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Artist : MAIN CONTROLS -->
+          <div class="apl-controls-group">
+            <button class="apl-main-btn">
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.0002 3L16.4402 5.34003L8.49023 5.32001C4.92023 5.32001 1.99023 8.25003 1.99023 11.84C1.99023 13.63 2.72022 15.26 3.90022 16.44"
+                  stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+                  d="M10.0001 21L7.56006 18.66L15.5101 18.68C19.0801 18.68 22.0101 15.75 22.0101 12.16C22.0101 10.37 21.2801 8.74 20.1001 7.56"
+                  stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M9 12H15" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+              </svg> </button>
+            <button class="apl-main-btn apl-main-btn_play">
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.76001 7.21999V16.79C3.76001 18.75 5.89 19.98 7.59 19L11.74 16.61L15.89 14.21C17.59 13.23 17.59 10.78 15.89 9.79998L11.74 7.39998L7.59 5.01C5.89 4.03 3.76001 5.24999 3.76001 7.21999Z"
+                  stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M20.2402 18.18V5.82001" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg> </button>
+            <button class="apl-main-btn">
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.96 6.17C18.96 7.56 20.34 9.77 20.62 12.32" stroke="#292D32" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M3.48999 12.37C3.74999 9.83 5.10999 7.62 7.08999 6.22" stroke="#292D32" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+                  d="M8.18994 20.94C9.34994 21.53 10.6699 21.86 12.0599 21.86C13.3999 21.86 14.6599 21.56 15.7899 21.01"
+                  stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+                  d="M12.06 7.7C13.5954 7.7 14.84 6.45535 14.84 4.92C14.84 3.38465 13.5954 2.14 12.06 2.14C10.5247 2.14 9.28003 3.38465 9.28003 4.92C9.28003 6.45535 10.5247 7.7 12.06 7.7Z"
+                  stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+                  d="M4.83005 19.92C6.3654 19.92 7.61005 18.6754 7.61005 17.14C7.61005 15.6046 6.3654 14.36 4.83005 14.36C3.2947 14.36 2.05005 15.6046 2.05005 17.14C2.05005 18.6754 3.2947 19.92 4.83005 19.92Z"
+                  stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+                  d="M19.1699 19.92C20.7052 19.92 21.9499 18.6754 21.9499 17.14C21.9499 15.6046 20.7052 14.36 19.1699 14.36C17.6345 14.36 16.3899 15.6046 16.3899 17.14C16.3899 18.6754 17.6345 19.92 19.1699 19.92Z"
+                  stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg> </button>
+          </div>
+        </div>
+        <!-- #endregion -->
+
+
+        <!-- Main : CONTENT -->
+        <div class="apl-main-content">
+
+          <!-- Main : SEARCH -->
+          <div class="apl-wrap-area">
+            <form id="mainSearchForm" method="get" class="apl-search-form">
+              <input id="mainSearchInput" type="text" class="apl-search-field" data-apl-evt=""
+                placeholder="Search Camila Cabello...">
+              <span class="apl-search-icon">
+                <svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M23 23L17 17" stroke="currentColor" stroke-width="1.5"></path>
+                  <circle cx="10.5" cy="10.5" r="9.5" stroke="currentColor" stroke-width="1.5"></circle>
+                </svg>
+              </span>
+            </form>
+          </div>
+
+          <!-- Main : CONTENT -->
+          <div class="apl-artist-content">
+
+            <!-- Section : SONGS -->
+            <section class="apl-row">
+
+              <div class="apl-row-head">
+                <div class="apl-flex-between">
+                  <h3 class="apl-row-title">All Songs</h3>
+                  <form class="apl-select-form" action="" method="post">
+                    <div class="apl-select-wrap">
+                      <select name="" id="">
+                        <option value="popular">Most Popular</option>
+                        <option value="recent">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="apl-row-body">
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="apl-row-footer">
+                <div class="apl-row-footer__wrapper">
+                  <div class="apl-pag">
+                    <button class="apl-pag__arrow is-flipped">
+                      <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
+                      </svg> </button>
+                    <button class="apl-pag__btn is-active">1</button>
+                    <button class="apl-pag__btn">2</button>
+                    <button class="apl-pag__btn">3</button>
+                    <button class="apl-pag__btn">4</button>
+                    <button class="apl-pag__btn">...</button>
+                    <button class="apl-pag__btn">14</button>
+                    <button class="apl-pag__arrow">
+                      <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
+                      </svg> </button>
+                  </div>
+                  <button data-apl-more="songs" class="apl-row-btn">
+                    178 More Songs
+                    <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
+                    </svg> </button>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section : VIDEOS -->
+            <section class="apl-row">
+              <div class="apl-row-head">
+                <div class="apl-flex-between">
+                  <h3 class="apl-row-title">Music Videos</h3>
+                  <form class="apl-select-form" action="" method="post">
+                    <div class="apl-select-wrap">
+                      <select name="" id="">
+                        <option value="popular">Most Popular</option>
+                        <option value="recent">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="apl-row-body">
+                <div class="apl-row__scroll-content">
+
+                  <div class="apl-video-col">
+                    <div class="apl-video">
+                      <div class="apl-video__media">
+                        <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                      </div>
+                      <div class="apl-video__details">
+                        <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                        <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                        <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                      </div>
+                    </div>
+                    <div class="apl-video">
+                      <div class="apl-video__media">
+                        <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                      </div>
+                      <div class="apl-video__details">
+                        <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                        <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                        <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="apl-video-col">
+                    <div class="apl-video">
+                      <div class="apl-video__media">
+                        <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                      </div>
+                      <div class="apl-video__details">
+                        <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                        <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                        <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                      </div>
+                    </div>
+                    <div class="apl-video">
+                      <div class="apl-video__media">
+                        <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                      </div>
+                      <div class="apl-video__details">
+                        <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                        <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                        <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="apl-video-col">
+                    <div class="apl-video">
+                      <div class="apl-video__media">
+                        <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                      </div>
+                      <div class="apl-video__details">
+                        <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                        <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                        <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                      </div>
+                    </div>
+                    <div class="apl-video">
+                      <div class="apl-video__media">
+                        <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                      </div>
+                      <div class="apl-video__details">
+                        <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                        <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                        <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="apl-video-col">
+                    <div class="apl-video">
+                      <div class="apl-video__media">
+                        <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                      </div>
+                      <div class="apl-video__details">
+                        <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                        <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                        <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                      </div>
+                    </div>
+                    <div class="apl-video">
+                      <div class="apl-video__media">
+                        <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                      </div>
+                      <div class="apl-video__details">
+                        <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                        <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                        <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="apl-scroll-btn">
+                    More
+                    <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
+                    </svg> </button>
+                  <div class="apl-scroll-space"></div>
+                </div>
+              </div>
+
+              <div class="apl-row-footer">
+                <div class="apl-row-footer__wrapper">
+                  <button data-apl-more="videos" class="apl-row-btn">
+                    42 More Videos
+                    <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
+                    </svg> </button>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section : MERCH -->
+            <section class="apl-row">
+              <div class="apl-row-head">
+                <div class="apl-flex-between">
+                  <h3 class="apl-row-title">Shop Merch</h3>
+                  <form class="apl-select-form" action="" method="post">
+                    <div class="apl-select-wrap">
+                      <select name="" id="">
+                        <option value="low-high">Low - High</option>
+                        <option value="high-low">High - Low</option>
+                        <option value="popular">Most Popular</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="apl-row-body">
+                <div class="apl-merch-grid">
+                  <div class="apl-merch">
+                    <div class="apl-merch__media">
+                      <img src="./assets/merch-sample.png" loading="lazy" alt="">
+                      <span class="apl-merch-tag">STOCK</span>
+                    </div>
+                    <div class="apl-merch__details">
+                      <div class="apl-item-name">Romance v2.0 T-shirt Pink Rose</div>
+                      <div class="apl-item-price">$68 USD</div>
+                    </div>
+                  </div>
+                  <div class="apl-merch">
+                    <div class="apl-merch__media">
+                      <img src="./assets/merch-sample.png" loading="lazy" alt="">
+                      <span class="apl-merch-tag">STOCK</span>
+                    </div>
+                    <div class="apl-merch__details">
+                      <div class="apl-item-name">Romance v2.0 T-shirt Pink Rose</div>
+                      <div class="apl-item-price">$68 USD</div>
+                    </div>
+                  </div>
+                  <div class="apl-merch">
+                    <div class="apl-merch__media">
+                      <img src="./assets/merch-sample.png" loading="lazy" alt="">
+                      <span class="apl-merch-tag">STOCK</span>
+                    </div>
+                    <div class="apl-merch__details">
+                      <div class="apl-item-name">Romance v2.0 T-shirt Pink Rose</div>
+                      <div class="apl-item-price">$68 USD</div>
+                    </div>
+                  </div>
+                  <div class="apl-merch">
+                    <div class="apl-merch__media">
+                      <img src="./assets/merch-sample.png" loading="lazy" alt="">
+                      <span class="apl-merch-tag">STOCK</span>
+                    </div>
+                    <div class="apl-merch__details">
+                      <div class="apl-item-name">Romance v2.0 T-shirt Pink Rose</div>
+                      <div class="apl-item-price">$68 USD</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="apl-row-footer">
+                <div class="apl-row-footer__wrapper">
+                  <div class="apl-pag">
+                    <button class="apl-pag__arrow is-flipped">
+                      <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
+                      </svg> </button>
+                    <button class="apl-pag__btn is-active">1</button>
+                    <button class="apl-pag__btn">2</button>
+                    <button class="apl-pag__btn">3</button>
+                    <button class="apl-pag__btn">4</button>
+                    <button class="apl-pag__btn">...</button>
+                    <button class="apl-pag__btn">14</button>
+                    <button class="apl-pag__arrow">
+                      <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
+                      </svg> </button>
+                  </div>
+                  <button data-apl-more="merch" class="apl-row-btn">
+                    Explore Merch
+                    <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
+                    </svg> </button>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section : ALBUMS -->
+            <section class="apl-row">
+              <div class="apl-row-head">
+                <div class="apl-flex-between">
+                  <h3 class="apl-row-title">Music Albums</h3>
+                </div>
+              </div>
+              <div class="apl-row-body">
+                <div class="apl-wrap">
+                  <div class="apl-albums-grid">
+                    <div class="apl-album">
+                      <div class="apl-album__media">
+                        <img src="./assets/album-sample.png" loading="lazy" alt="">
+                      </div>
+                      <div class="apl-album__details">
+                        <div class="apl-item-subheading">Epic</div>
+                        <div class="apl-item-name">Radio 1's Live Lounge</div>
+                        <div class="apl-item-subname">Released on 04 Aug, 2022</div>
+                        <div class="apl-album__links">
+                          <a href="#" class="apl-album-link">
+                            <img src="./assets/spotify-btn.svg" loading="lazy" alt="">
+                          </a>
+                          <a href="#" class="apl-album-link">
+                            <img src="./assets/apple-music-btn.svg" loading="lazy" alt="">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="apl-album">
+                      <div class="apl-album__media">
+                        <img src="./assets/album-sample.png" loading="lazy" alt="">
+                      </div>
+                      <div class="apl-album__details">
+                        <div class="apl-item-subheading">Epic</div>
+                        <div class="apl-item-name">Radio 1's Live Lounge</div>
+                        <div class="apl-item-subname">Released on 04 Aug, 2022</div>
+                        <div class="apl-album__links">
+                          <a href="#" class="apl-album-link">
+                            <img src="./assets/spotify-btn.svg" loading="lazy" alt="">
+                          </a>
+                          <a href="#" class="apl-album-link">
+                            <img src="./assets/apple-music-btn.svg" loading="lazy" alt="">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="apl-row-footer">
+                <div class="apl-row-footer__wrapper">
+                  <button data-apl-more="albums" class="apl-row-btn">
+                    3 More Music Albums
+                    <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
+                    </svg> </button>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section : POSTS -->
+            <section class="apl-row">
+              <div class="apl-row-head">
+                <div class="apl-flex-between">
+                  <h3 class="apl-row-title apl-row-title_x">POSTS</h3>
+                </div>
+              </div>
+              <div class="apl-row-body">
+                <div class="apl-empty-row">No active posts yet...</div>
+              </div>
+
+              <div class="apl-row-footer">
+                <div class="apl-row-footer__wrapper">
+                  <button class="apl-row-btn apl-row-btn_x">
+                    Go To<span>X</span>
+                    <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
+                    </svg> </button>
+                </div>
+              </div>
+
+            </section>
+
+            <!-- Section : GALLERY -->
+            <section class="apl-row">
+              <div class="apl-row-head">
+                <div class="apl-flex-between justify_center">
+                  <h3 class="apl-row-title">Gallery
+                    <span>Explore Camila Cabello's gallery with over than 760 photos</span>
+                  </h3>
+                </div>
+              </div>
+              <div class="apl-row-body">
+                <div class="apl-gallery-row">
+
+                  <div>
+                    <div class="apl-ticker_left">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-ticker_left">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-ticker_left">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                    </div>
+                  </div>
+                  <div class="is-flipped">
+                    <div class="apl-ticker_right">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-ticker_right">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-ticker_right">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                      <img src="./assets/gallery-sample.jpeg" loading="eager" alt="">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="apl-row-footer">
+                <div class="apl-row-footer__wrapper">
+                  <button class="apl-row-btn">
+                    Go To Gallery
+                    <svg width="12" height="12" viewbox="0 0 15 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1.5L13 13.5L1 25.5" stroke="currentColor" stroke-width="4"></path>
+                    </svg> </button>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section : FOOTER -->
+            <footer class="apl-row">
+              <div class="apl-footer">
+                <div class="apl-footer__wrapper">
+                  <div class="apl-app-info">
+                    <img src="./assets/artist-main.webp" loading="lazy" alt="">
+                    <span>Camila Cabello</span>
+                  </div>
+
+                  <div class="apl-super-grid">
+                    <div class="apl-social-box">
+                      <img src="./assets/tiktok.svg" loading="lazy" alt="">
+                      <span>TikTok<span>3.4 Followers</span>
+                      </span>
+                    </div>
+
+                    <div class="apl-social-box">
+                      <img src="./assets/youtube.svg" loading="lazy" alt="">
+                      <span>YouTube<span>
+                          1,2M Subscribers</span>
+                      </span>
+                    </div>
+
+                    <div class="apl-social-box">
+                      <img src="./assets/twitter.svg" loading="lazy" alt="">
+                      <span>Twitter<span>
+                          358K Followers</span>
+                      </span>
+                    </div>
+
+                    <div class="apl-social-box">
+                      <img src="./assets/facebook.svg" loading="lazy" alt="">
+                      <span>Facebook<span>
+                          358K Followers</span>
+                      </span>
+                    </div>
+
+                    <div class="apl-social-box">
+                      <img src="./assets/instagram.svg" loading="lazy" alt="">
+                      <span>Instagram<span>
+                          5M FOLLOWERS</span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="apl-powered">
+                    <span>Powered By</span><img src="./assets/ersy_logo.svg" loading="lazy" alt="">
+                  </div>
+                </div>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="apl-more">
+    <div class="apl-more-holder">
+      <div class="apl-more-container">
+
+        <div id="moreSongs" class="apl-more-screen">
+          <div class="apl-more__wrapper">
+            <div class="apl-sticky-head">
+              <div class="apl-flex-between">
+                <button data-apl-more class="apl-header-icon">
+                  <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 3L7 12L16 21" stroke="#171C29" stroke-width="1.5"></path>
+                  </svg> </button>
+                <h5 class="apl-screen-title">All Songs</h5>
+                <button data-more-evt="filterContent" class="apl-header-icon">
+                  <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.3201 19.07C14.3201 19.68 13.92 20.48 13.41 20.79L12.0001 21.7C10.6901 22.51 8.87006 21.6 8.87006 19.98V14.63C8.87006 13.92 8.47006 13.01 8.06006 12.51L4.22003 8.47C3.71003 7.96 3.31006 7.06001 3.31006 6.45001V4.13C3.31006 2.92 4.22008 2.01001 5.33008 2.01001H18.67C19.78 2.01001 20.6901 2.92 20.6901 4.03V6.25C20.6901 7.06 20.1801 8.07001 19.6801 8.57001"
+                      stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path
+                      d="M16.07 16.52C17.8373 16.52 19.27 15.0873 19.27 13.32C19.27 11.5527 17.8373 10.12 16.07 10.12C14.3027 10.12 12.87 11.5527 12.87 13.32C12.87 15.0873 14.3027 16.52 16.07 16.52Z"
+                      stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M19.87 17.12L18.87 16.12" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg> </button>
+              </div>
+            </div>
+            <div class="apl-more__body">
+              <div class="apl-more__search-box">
+                <form id="" method="get" class="apl-search-form">
+                  <input id="" type="text" class="apl-search-field" data-apl-evt="" placeholder="Search any song...">
+                  <span class="apl-search-icon">
+                    <svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M23 23L17 17" stroke="currentColor" stroke-width="1.5"></path>
+                      <circle cx="10.5" cy="10.5" r="9.5" stroke="currentColor" stroke-width="1.5"></circle>
+                    </svg>
+                  </span>
+                </form>
+              </div>
+              <div class="apl-more__total-typo">182 Songs Total</div>
+              <div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="apl-song">
+                  <div class="apl-song__wrapper">
+                    <div class="apl-song__media">
+                      <img src="./assets/song-cover.jpeg" loading="eager" alt="">
+                    </div>
+                    <div class="apl-song__details">
+                      <span class="apl-item-name">I'll Be Home For Christmas (Official Audio)</span>
+                      <span class="apl-item-subname">Camila Cabello</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="apl-more-loader">
+                <div>
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" width="40px" height="40px" viewbox="0 0 40 40" enable-background="new 0 0 40 40"
+                    xml:space="preserve">
+                    <path opacity="0.2" fill="#171c29"
+                      d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946 s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634 c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z">
+                    </path>
+                    <path fill="#171c29"
+                      d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0 C22.32,8.481,24.301,9.057,26.013,10.047z">
+                    </path>
+                    <animatetransform attributetype="xml" attributename="transform" type="rotate" from="0 20 20"
+                      to="360 20 20" dur="0.5s" repeatcount="indefinite"></animatetransform>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="screen-modal">
+              <div class="screen-modal__backdrop"></div>
+              <div class="screen-modal__container">
+                <div class="screen-modal__head">
+                  <span class="apl-screen-title">Filter Songs</span>
+                  <button class="screen-modal__close-btn">
+                    <svg width="16" height="16" viewbox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1.5L25 25.5" stroke="currentColor" stroke-width="2"></path>
+                      <path d="M25 1.5L1 25.5" stroke="currentColor" stroke-width="2"></path>
+                    </svg> </button>
+                </div>
+                <div class="screen-modal__body">
+                  <div class="screen-modal__filters-wrap">
+                    <button class="filter-btn is-active">Popular First</button>
+                    <button class="filter-btn">Newest First</button>
+                    <button class="filter-btn">Oldest First</button>
+                    <button class="filter-btn">Alphabetically</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="moreVideos" class="apl-more-screen">
+          <div class="apl-more__wrapper">
+            <div class="apl-sticky-head">
+              <div class="apl-flex-between">
+                <button data-apl-more class="apl-header-icon">
+                  <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 3L7 12L16 21" stroke="#171C29" stroke-width="1.5"></path>
+                  </svg> </button>
+                <h5 class="apl-screen-title">Music Videos</h5>
+                <button data-more-evt="filterContent" class="apl-header-icon">
+                  <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.3201 19.07C14.3201 19.68 13.92 20.48 13.41 20.79L12.0001 21.7C10.6901 22.51 8.87006 21.6 8.87006 19.98V14.63C8.87006 13.92 8.47006 13.01 8.06006 12.51L4.22003 8.47C3.71003 7.96 3.31006 7.06001 3.31006 6.45001V4.13C3.31006 2.92 4.22008 2.01001 5.33008 2.01001H18.67C19.78 2.01001 20.6901 2.92 20.6901 4.03V6.25C20.6901 7.06 20.1801 8.07001 19.6801 8.57001"
+                      stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path
+                      d="M16.07 16.52C17.8373 16.52 19.27 15.0873 19.27 13.32C19.27 11.5527 17.8373 10.12 16.07 10.12C14.3027 10.12 12.87 11.5527 12.87 13.32C12.87 15.0873 14.3027 16.52 16.07 16.52Z"
+                      stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M19.87 17.12L18.87 16.12" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg> </button>
+              </div>
+            </div>
+            <div class="apl-more__body">
+              <div class="apl-more__search-box">
+                <form id="" method="get" class="apl-search-form">
+                  <input id="" type="text" class="apl-search-field" data-apl-evt="" placeholder="Search any video...">
+                  <span class="apl-search-icon">
+                    <svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M23 23L17 17" stroke="currentColor" stroke-width="1.5"></path>
+                      <circle cx="10.5" cy="10.5" r="9.5" stroke="currentColor" stroke-width="1.5"></circle>
+                    </svg>
+                  </span>
+                </form>
+              </div>
+              <div class="apl-more__total-typo">487 Music Videos</div>
+              <div class="apl-more__main-box main-box_videos">
+                <div class="apl-video">
+                  <div class="apl-video__media">
+                    <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                  </div>
+                  <div class="apl-video__details">
+                    <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                    <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                    <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                  </div>
+                </div>
+                <div class="apl-video">
+                  <div class="apl-video__media">
+                    <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                  </div>
+                  <div class="apl-video__details">
+                    <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                    <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                    <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                  </div>
+                </div>
+                <div class="apl-video">
+                  <div class="apl-video__media">
+                    <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                  </div>
+                  <div class="apl-video__details">
+                    <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                    <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                    <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                  </div>
+                </div>
+                <div class="apl-video">
+                  <div class="apl-video__media">
+                    <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                  </div>
+                  <div class="apl-video__details">
+                    <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                    <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                    <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                  </div>
+                </div>
+                <div class="apl-video">
+                  <div class="apl-video__media">
+                    <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                  </div>
+                  <div class="apl-video__details">
+                    <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                    <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                    <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                  </div>
+                </div>
+                <div class="apl-video">
+                  <div class="apl-video__media">
+                    <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                  </div>
+                  <div class="apl-video__details">
+                    <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                    <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                    <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                  </div>
+                </div>
+                <div class="apl-video">
+                  <div class="apl-video__media">
+                    <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                  </div>
+                  <div class="apl-video__details">
+                    <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                    <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                    <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                  </div>
+                </div>
+                <div class="apl-video">
+                  <div class="apl-video__media">
+                    <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                  </div>
+                  <div class="apl-video__details">
+                    <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                    <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                    <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                  </div>
+                </div>
+                <div class="apl-video">
+                  <div class="apl-video__media">
+                    <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                  </div>
+                  <div class="apl-video__details">
+                    <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                    <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                    <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                  </div>
+                </div>
+                <div class="apl-video">
+                  <div class="apl-video__media">
+                    <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                  </div>
+                  <div class="apl-video__details">
+                    <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                    <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                    <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                  </div>
+                </div>
+                <div class="apl-video">
+                  <div class="apl-video__media">
+                    <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                  </div>
+                  <div class="apl-video__details">
+                    <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                    <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                    <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                  </div>
+                </div>
+                <div class="apl-video">
+                  <div class="apl-video__media">
+                    <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                  </div>
+                  <div class="apl-video__details">
+                    <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                    <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                    <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                  </div>
+                </div>
+                <div class="apl-video">
+                  <div class="apl-video__media">
+                    <img src="./assets/video-sample.jpeg" loading="eager" alt="">
+                  </div>
+                  <div class="apl-video__details">
+                    <span class="apl-item-subheading">13 JUNE, 2023<span class="span-dot">•</span>308K Views</span>
+                    <span class="apl-item-name">Don't Go Yet (Live at the 2021 Billboard Latin Music Awards)</span>
+                    <span class="apl-item-subname">CamilaCabelloVEVO</span>
+                  </div>
+                </div>
+              </div>
+              <div class="apl-more-loader">
+                <div>
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" width="40px" height="40px" viewbox="0 0 40 40" enable-background="new 0 0 40 40"
+                    xml:space="preserve">
+                    <path opacity="0.2" fill="#171c29"
+                      d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946 s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634 c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z">
+                    </path>
+                    <path fill="#171c29"
+                      d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0 C22.32,8.481,24.301,9.057,26.013,10.047z">
+                    </path>
+                    <animatetransform attributetype="xml" attributename="transform" type="rotate" from="0 20 20"
+                      to="360 20 20" dur="0.5s" repeatcount="indefinite"></animatetransform>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="screen-modal">
+              <div class="screen-modal__backdrop"></div>
+              <div class="screen-modal__container">
+                <div class="screen-modal__head">
+                  <span class="apl-screen-title">Filter Videos</span>
+                  <button class="screen-modal__close-btn">
+                    <svg width="16" height="16" viewbox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1.5L25 25.5" stroke="currentColor" stroke-width="2"></path>
+                      <path d="M25 1.5L1 25.5" stroke="currentColor" stroke-width="2"></path>
+                    </svg> </button>
+                </div>
+                <div class="screen-modal__body">
+                  <div class="screen-modal__filters-wrap">
+                    <button class="filter-btn is-active">Most Views</button>
+                    <button class="filter-btn">Latest Uploaded</button>
+                    <button class="filter-btn">Oldest First</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="moreMerch" class="apl-more-screen">
+          <div class="apl-more__wrapper">
+            <div class="apl-sticky-head">
+              <div class="apl-flex-between">
+                <button data-apl-more class="apl-header-icon">
+                  <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 3L7 12L16 21" stroke="#171C29" stroke-width="1.5"></path>
+                  </svg> </button>
+                <h5 class="apl-screen-title">Merch</h5>
+                <button data-more-evt="filterContent" class="apl-header-icon">
+                  <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.3201 19.07C14.3201 19.68 13.92 20.48 13.41 20.79L12.0001 21.7C10.6901 22.51 8.87006 21.6 8.87006 19.98V14.63C8.87006 13.92 8.47006 13.01 8.06006 12.51L4.22003 8.47C3.71003 7.96 3.31006 7.06001 3.31006 6.45001V4.13C3.31006 2.92 4.22008 2.01001 5.33008 2.01001H18.67C19.78 2.01001 20.6901 2.92 20.6901 4.03V6.25C20.6901 7.06 20.1801 8.07001 19.6801 8.57001"
+                      stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path
+                      d="M16.07 16.52C17.8373 16.52 19.27 15.0873 19.27 13.32C19.27 11.5527 17.8373 10.12 16.07 10.12C14.3027 10.12 12.87 11.5527 12.87 13.32C12.87 15.0873 14.3027 16.52 16.07 16.52Z"
+                      stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M19.87 17.12L18.87 16.12" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg> </button>
+              </div>
+            </div>
+            <div class="apl-more__body">
+              <div class="apl-more__total-typo">9 Merch Items</div>
+              <div class="apl-more__main-box">
+                <div class="apl-merch-grid">
+                  <div class="apl-merch">
+                    <div class="apl-merch__media">
+                      <img src="./assets/merch-sample.png" loading="lazy" alt="">
+                      <span class="apl-merch-tag">STOCK</span>
+                    </div>
+                    <div class="apl-merch__details">
+                      <div class="apl-item-name">Romance v2.0 T-shirt Pink Rose</div>
+                      <div class="apl-item-price">$68 USD</div>
+                    </div>
+                  </div>
+                  <div class="apl-merch">
+                    <div class="apl-merch__media">
+                      <img src="./assets/merch-sample.png" loading="lazy" alt="">
+                      <span class="apl-merch-tag">STOCK</span>
+                    </div>
+                    <div class="apl-merch__details">
+                      <div class="apl-item-name">Romance v2.0 T-shirt Pink Rose</div>
+                      <div class="apl-item-price">$68 USD</div>
+                    </div>
+                  </div>
+                  <div class="apl-merch">
+                    <div class="apl-merch__media">
+                      <img src="./assets/merch-sample.png" loading="lazy" alt="">
+                      <span class="apl-merch-tag">STOCK</span>
+                    </div>
+                    <div class="apl-merch__details">
+                      <div class="apl-item-name">Romance v2.0 T-shirt Pink Rose</div>
+                      <div class="apl-item-price">$68 USD</div>
+                    </div>
+                  </div>
+                  <div class="apl-merch">
+                    <div class="apl-merch__media">
+                      <img src="./assets/merch-sample.png" loading="lazy" alt="">
+                      <span class="apl-merch-tag">STOCK</span>
+                    </div>
+                    <div class="apl-merch__details">
+                      <div class="apl-item-name">Romance v2.0 T-shirt Pink Rose</div>
+                      <div class="apl-item-price">$68 USD</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="apl-more-loader">
+                <div>
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" width="40px" height="40px" viewbox="0 0 40 40" enable-background="new 0 0 40 40"
+                    xml:space="preserve">
+                    <path opacity="0.2" fill="#171c29"
+                      d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946 s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634 c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z">
+                    </path>
+                    <path fill="#171c29"
+                      d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0 C22.32,8.481,24.301,9.057,26.013,10.047z">
+                    </path>
+                    <animatetransform attributetype="xml" attributename="transform" type="rotate" from="0 20 20"
+                      to="360 20 20" dur="0.5s" repeatcount="indefinite"></animatetransform>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="screen-modal">
+              <div class="screen-modal__backdrop"></div>
+              <div class="screen-modal__container">
+                <div class="screen-modal__head">
+                  <span class="apl-screen-title">Filter Videos</span>
+                  <button class="screen-modal__close-btn">
+                    <svg width="16" height="16" viewbox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1.5L25 25.5" stroke="currentColor" stroke-width="2"></path>
+                      <path d="M25 1.5L1 25.5" stroke="currentColor" stroke-width="2"></path>
+                    </svg> </button>
+                </div>
+                <div class="screen-modal__body">
+                  <div class="screen-modal__filters-wrap">
+                    <button class="filter-btn is-active">Low - High Price</button>
+                    <button class="filter-btn">High - Low Price</button>
+                    <button class="filter-btn">Best Sellers</button>
+                    <button class="filter-btn">Most Popular</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="moreAlbums" class="apl-more-screen">
+          <div class="apl-more__wrapper">
+            <div class="apl-sticky-head">
+              <div class="apl-flex-between">
+                <button data-apl-more class="apl-header-icon">
+                  <svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 3L7 12L16 21" stroke="#171C29" stroke-width="1.5"></path>
+                  </svg> </button>
+                <h5 class="apl-screen-title">Music Albums</h5>
+              </div>
+            </div>
+            <div class="apl-more__body">
+              <div class="apl-more__total-typo">8 Albums</div>
+              <div class="apl-more__main-box">
+                <div class="apl-albums-grid">
+                  <div class="apl-album">
+                    <div class="apl-album__media">
+                      <img src="./assets/album-sample.png" loading="lazy" alt="">
+                    </div>
+                    <div class="apl-album__details">
+                      <div class="apl-item-subheading">Epic</div>
+                      <div class="apl-item-name">Radio 1's Live Lounge</div>
+                      <div class="apl-item-subname">Released on 04 Aug, 2022</div>
+                      <div class="apl-album__links">
+                        <a href="#" class="apl-album-link">
+                          <img src="./assets/spotify-btn.svg" loading="lazy" alt="">
+                        </a>
+                        <a href="#" class="apl-album-link">
+                          <img src="./assets/apple-music-btn.svg" loading="lazy" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="apl-album">
+                    <div class="apl-album__media">
+                      <img src="./assets/album-sample.png" loading="lazy" alt="">
+                    </div>
+                    <div class="apl-album__details">
+                      <div class="apl-item-subheading">Epic</div>
+                      <div class="apl-item-name">Radio 1's Live Lounge</div>
+                      <div class="apl-item-subname">Released on 04 Aug, 2022</div>
+                      <div class="apl-album__links">
+                        <a href="#" class="apl-album-link">
+                          <img src="./assets/spotify-btn.svg" loading="lazy" alt="">
+                        </a>
+                        <a href="#" class="apl-album-link">
+                          <img src="./assets/apple-music-btn.svg" loading="lazy" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="apl-album">
+                    <div class="apl-album__media">
+                      <img src="./assets/album-sample.png" loading="lazy" alt="">
+                    </div>
+                    <div class="apl-album__details">
+                      <div class="apl-item-subheading">Epic</div>
+                      <div class="apl-item-name">Radio 1's Live Lounge</div>
+                      <div class="apl-item-subname">Released on 04 Aug, 2022</div>
+                      <div class="apl-album__links">
+                        <a href="#" class="apl-album-link">
+                          <img src="./assets/spotify-btn.svg" loading="lazy" alt="">
+                        </a>
+                        <a href="#" class="apl-album-link">
+                          <img src="./assets/apple-music-btn.svg" loading="lazy" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="apl-album">
+                    <div class="apl-album__media">
+                      <img src="./assets/album-sample.png" loading="lazy" alt="">
+                    </div>
+                    <div class="apl-album__details">
+                      <div class="apl-item-subheading">Epic</div>
+                      <div class="apl-item-name">Radio 1's Live Lounge</div>
+                      <div class="apl-item-subname">Released on 04 Aug, 2022</div>
+                      <div class="apl-album__links">
+                        <a href="#" class="apl-album-link">
+                          <img src="./assets/spotify-btn.svg" loading="lazy" alt="">
+                        </a>
+                        <a href="#" class="apl-album-link">
+                          <img src="./assets/apple-music-btn.svg" loading="lazy" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="apl-more__volunteer-btn">Become a Volunteer</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/jquery.js"></script>
+  <script src="./js/main.js"></script>
 
 </body>
 
