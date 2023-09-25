@@ -16,5 +16,10 @@
     {"caption":"Merch", "href": "#"},
     {"caption":"Albums", "href": "#"},
     {"caption":"Gallery", "href": "#"}
-  ]
+  ],
+  "video": {
+    "name": "Camila Cabello - Bam Bam (Official Music Video) ft. Ed Sheeran",
+    "views": "6.8M",
+    "uploadDate": "2 Years Ago"
+  }
 }

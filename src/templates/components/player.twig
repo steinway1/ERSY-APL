@@ -1,0 +1,158 @@
+{% set stickyVideo = false %}
+
+<div class="player">
+	<div class="player-area">
+		<div class="player-screen">
+			<div class="player__background">
+				<img src="./assets/sample-video.webp" loading="eager">
+			</div>
+			<div class="player__main">
+				<div class="player-header">
+					<button data-player-evt="close" class="apl-header-icon">
+						{% include "../svg/back.svg" %}
+					</button>
+					<h3 class="apl-screen-title">Live Player</h3>
+					<button data-apl-evt="filterContent" class="apl-header-icon">
+						{% include "../svg/more.svg" %}
+					</button>
+				</div>
+				<div class="player__yt-controls">
+					<a target="_blank" href="https://youtube.com">
+						<div>
+							{% include "../svg/yt-logo.svg" %}
+						</div>
+					</a>
+					<a target="_blank" href="https://youtube.com">
+						<div>
+							{% include "../svg/external-link.svg" %}
+						</div>
+					</a>
+				</div>
+				<div class="player__video{% if stickyVideo == true %}{% else %} is-static{% endif %}">
+					<div class="player__video-wrap">
+						<div
+							class="player-video">
+							{# VIDEO GOES HERE #}
+							<img src="./assets/sample-video.webp" class="apl-temp-img">
+						</div>
+					</div>
+					<div class="player__video-controls">
+						<div data-player-evt="addFav" class="player-btn player-btn_sub player-btn_dim">
+							{% include "../svg/heart.twig" with { width: 20, height: 20 } %}
+						</div>
+						<div data-player-evt="prevItem" class="player-btn player-btn_sub">
+							{% include "../svg/player-prev.svg" %}
+						</div>
+						<div data-player-evt="togglePlay" class="player-btn">
+							{% include "../svg/player-play-stop.twig" with { play: 1 } %}
+						</div>
+						<div data-player-evt="nextItem" class="player-btn player-btn_sub">
+							{% include "../svg/player-next.svg" %}
+						</div>
+						<div data-player-evt="togglePosition" class="player-btn player-btn_sub player-btn_dim">
+							{% include "../svg/player-collapse.svg" %}
+						</div>
+					</div>
+				</div>
+
+				<div class="player__details">
+					<div class="player__song-name">{{video.name}}</div>
+					<div class="player__song-details">{{video.views}} views<span>•</span>
+						{{video.uploadDate}}</div>
+				</div>
+
+				<div class="player__content">
+
+					<div class="player__nav">
+						<button data-player-evt="playlist" class="player__nav-btn is-active">
+							{% include "../svg/playlist.twig" %}
+							<span>Playlist</span>
+						</button>
+						<button data-player-evt="videos" class="player__nav-btn">
+							{% include "../svg/videos.twig" %}
+							<span>Music Videos</span>
+						</button>
+						<button data-player-evt="interviews" class="player__nav-btn">
+							{% include "../svg/interviews.twig" %}
+							<span>Interviews</span>
+						</button>
+						<button data-player-evt="audios" class="player__nav-btn">
+							{% include "../svg/audios.twig" %}
+							<span>Audios</span>
+						</button>
+						<button data-player-evt="live" class="player__nav-btn">
+							{% include "../svg/live.twig" %}
+							<span>Live</span>
+						</button>
+					</div>
+
+					<div class="player__section-bar">
+						<span class="player__section-name">My Playlist</span>
+						<div class="player__section-conrols">
+							<button data-player-evt="shuffleSection" class="player__section-btn">
+								{% include "../svg/playlist-shuffle.svg" %}
+							</button>
+							<button data-player-evt="openSection" class="player__section-btn">
+								{% include "../svg/burger.svg" %}
+							</button>
+						</div>
+					</div>
+
+					<div id="playerPlaylist" class="player__section">
+						<div class="player__items-wrap">
+							{% for i in 0..8 %}
+								{% if i == 1 %}
+									{% include "../elements/song-item.twig" with { active: true } %}
+								{% else %}
+									{% include "../elements/song-item.twig" %}
+								{% endif %}
+							{% endfor %}
+						</div>
+					</div>
+
+
+					<div id="playerVideos" class="player__section">
+						<div class="player__items-wrap">
+							<div class="player__videos-grid">
+								{% for i in 0..6 %}
+									{% include "../elements/video-item.twig" %}
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+
+					<div id="playerInterviews" class="player__section">
+						<div class="player__items-wrap">
+							<div class="player__videos-grid">
+								{% for i in 0..2 %}
+									{% include "../elements/video-item.twig" %}
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+
+
+					<div id="playerAudios" class="player__section is-visible">
+						<div class="player__items-wrap">
+							{% for i in 0..2 %}
+								{% include "../elements/song-item.twig" %}
+							{% endfor %}
+						</div>
+					</div>
+
+
+					<div id="playerLive" class="player__section">
+						<div class="player__items-wrap">
+							<div class="player__empty-spot">No live yet...</div>
+						</div>
+					</div>
+
+
+					<div class="player__footer">
+						<button data-player-evt="backTop" class="player__footer-btn">Back To Top</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

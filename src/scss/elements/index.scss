@@ -55,9 +55,9 @@
 }
 
 .apl-item-subname {
-  color: rgba(23, 28, 41, .7);
   font-size: 11px;
   line-height: 22px;
+  opacity: 0.7;
 }
 
 .apl-scroll-space {
@@ -330,13 +330,13 @@
 }
 
 .apl-item-subheading {
-  color: rgba(23, 28, 41, .65);
   letter-spacing: .4px;
   text-transform: uppercase;
   margin-bottom: 4px;
   font-size: 10px;
   font-weight: 500;
   line-height: 22px;
+  opacity: .7;
 }
 
 .apl-albums-grid {
@@ -605,6 +605,7 @@
   padding-left: 20px;
   padding-right: 20px;
   display: block;
+  position: relative;
 }
 
 .apl-main-content {

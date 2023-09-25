@@ -1,4 +1,4 @@
-<div class="apl-song">
+<div class="apl-song{% if active is defined %} is-active{% endif %}">
   <div class="apl-song__wrapper">
     <div class="apl-song__media">
       <img src="{{songItem.imgUrl}}" loading="eager" alt="">

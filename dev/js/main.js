@@ -1,3 +1,13 @@
+const IS_ACTIVE = 'is-active',
+  IS_HIDDEN = 'is-hidden',
+  IS_EXPANDED = 'is-expanded'
+
+const $body = $('body')
+
+const lightBodyColor = '#ffffff',
+  darkBodyColor = '#121212'
+
+/* #region  Extends */
 $.fn.extend({
   exists: function () { return this.length },
   setBackScreen: function (opacityVal, filterVal) {
@@ -6,8 +16,10 @@ $.fn.extend({
   },
   isVisible: function () { return $(this).is(':visible') }
 })
+/* #endregion */
 
 
+/* #region  Utils */
 const getTransitionTime = (target) => {
   let el = target instanceof jQuery ? target[0] : target
   return (parseFloat(window.getComputedStyle(el).transitionDuration) * 1000)
@@ -23,6 +35,10 @@ const toggleSiblingClass = (target, cls = IS_ACTIVE) => {
 const getEvtDOM = (evtAttr) => {
   return $(`[data-evt="${evtAttr}"]`)
 }
+const getPlayerEvtDOM = (evtAttr) => {
+  return $(`[data-player-evt="${evtAttr}"]`)
+}
+/* #endregion */
 
 
 /* #region  Click ripple effect */
@@ -58,7 +74,7 @@ class rippleClickEffect {
     circle.css({ top: y + 'px', left: x + 'px' }).addClass(this.extend.animateClass)
   }
 }
-let rippleArr = Array.from($('.apl-menu-tab, .apl-song, .apl-pag__btn, .apl-row-btn, .apl-main-btn, .search-row__btn'))
+let rippleArr = Array.from($('.apl-menu-tab, .apl-song, .apl-pag__btn, .apl-row-btn, .apl-main-btn, .search-row__btn, .player__nav-btn, .player-btn, .player__footer-btn'))
 $.each(rippleArr, function (i) {
   rippleArr[i].onclick = (e) => { const $thisRipple = new rippleClickEffect($(this), e); $thisRipple.push() }
 })
@@ -72,9 +88,6 @@ const unlockScroll = () => { if (document.body.hasAttribute("ib-scroll-lock")) {
 
 
 
-const IS_ACTIVE = 'is-active',
-  IS_HIDDEN = 'is-hidden',
-  IS_EXPANDED = 'is-expanded'
 
 const apl = new Object({
   init: function () {
@@ -82,6 +95,7 @@ const apl = new Object({
     this.bindEvents()
     aplOver.init()
     aplMore.init()
+    player.init()
   },
   renderDOM: function () {
     // DOM
@@ -279,6 +293,115 @@ const aplMore = new Object({
         filterBtn.click(function () { modal.toggle() })
       }
     })
+  },
+  close: function () {
+    unlockScroll()
+    apl.fn.toggleContentVisible(true)
+    aplMore.container.css({ transform: 'translateX(100%)' })
+    aplMore._.hide()
+  }
+})
+
+
+const player = new Object({
+  isOpened: undefined,
+  xBefore: undefined,
+  yBefore: undefined,
+  init: function () {
+    this.renderDOM()
+    this.bindEvents()
+    this.close()
+  },
+  renderDOM: function () {
+    // Navigation
+    this._ = $('.player')
+    this.navBtn = $('.player__nav-btn')
+    this.navContainer = $('.player__nav')
+    this.section = $('.player__section')
+    this.sectionName = $('.player__section-name')
+    this.evtClose = getPlayerEvtDOM('close')
+    this.evtOpen = getPlayerEvtDOM('open')
+  },
+  bindEvents: function () {
+    this.navBtn.click(function () { player.fn.toggleSection($(this)) })
+    this.evtClose.click(function () { player.close() })
+    this.evtOpen.click(function () {
+      if (player.isOpened) {
+        return
+      } else {
+        player.open()
+      }
+    })
+  },
+  fn: {
+    toggleSection: function (target) {
+      if (target.length) {
+        let attr = target.data('player-evt')
+        if (attr) {
+          let el = player.section;
+          let title, section
+          switch (attr) {
+            case 'playlist':
+              title = 'My Playlist'
+              section = el.filter('#playerPlaylist')
+              break;
+            case 'videos':
+              title = 'Music Videos'
+              section = el.filter('#playerVideos')
+              break;
+            case 'interviews':
+              title = 'Interviews'
+              section = el.filter('#playerInterviews')
+              break;
+            case 'audios':
+              title = 'Audios'
+              section = el.filter('#playerAudios')
+              break;
+            case 'live':
+              title = 'Live'
+              section = el.filter('#playerLive')
+              break;
+            default:
+              title = 'My Playlist'
+              section = el[0]
+              break;
+          }
+          if (el.length && section.length) {
+            el.hide(); section.show(); player.sectionName.html(title)
+            player.navBtn.removeClass(IS_ACTIVE).filter(target).addClass(IS_ACTIVE)
+          }
+        } else {
+          return false
+        }
+      }
+    },
+    setAxis: function (reset) {
+      if (reset == 0) {
+        player.xBefore = 0
+        player.yBefore = 0
+      } else {
+        player.xBefore = window.pageXOffset || document.documentElement.scrollLeft
+        player.yBefore = window.pageYOffset || document.documentElement.scrollTop
+      }
+    }
+  },
+  open: function () {
+    player.isOpened = true
+    apl.mainContent.hide()
+    this._.show()
+    $body.css({ background: darkBodyColor, 'background-color': darkBodyColor })
+    $(player.navBtn[0]).trigger('click')
+    if (aplMore._.isVisible()) {
+      aplMore.close()
+    }
+    window.scrollTo(0, 0)
+  },
+  close: function () {
+    player.isOpened = false
+    apl.mainContent.show()
+    this._.hide()
+    $body.css({ background: lightBodyColor, 'background-color': lightBodyColor })
+    window.scrollTo(0, 0)
   }
 })
 
