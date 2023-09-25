@@ -1,0 +1,46 @@
+<div class="apl-gallery">
+	<div id="overSearch" class="apl-gallery-holder">
+		<div class="apl-gallery-screen">
+			<div class="apl-gallery__main">
+				<div class="apl-sticky-head">
+					<div class="apl-flex-between">
+						<div class="apl-header-icon" data-evt="closeGallery">
+							{% include "../svg/back.svg" %}
+						</div>
+						<h5 class="apl-screen-title">Gallery</h5>
+					</div>
+				</div>
+				<div class="apl-gallery-body">
+					<div class="apl-gallery__grid">
+						{% for item in 0..11 %}
+							<div class="apl-gallery-item">
+								<img src="./assets/gallery-{{item + 1}}.jpeg" loading="lazy" alt="">
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="gallery-slider">
+				<div id="gallerySplide" class="gallery-slider__main splide">
+					<div class="splide__track">
+						<div
+							class="splide__list">{# SLIDERS #}
+						</div>
+					</div>
+
+					<div class="splide__arrows">
+						<button class="gallery__splide-arrow splide__arrow--prev">
+							{% include "../svg/slider-prev.svg" %}
+						</button>
+						<button class="gallery__splide-arrow splide__arrow--next">
+							{% include "../svg/slider-next.svg" %}
+						</button>
+					</div>
+				</div>
+				<div data-gallery-evt="closeSlider" class="gallery-slider__close-btn">
+					{% include '../svg/close.svg' %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

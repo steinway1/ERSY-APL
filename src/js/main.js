@@ -96,6 +96,7 @@ const apl = new Object({
     aplOver.init()
     aplMore.init()
     player.init()
+    gallery.init()
   },
   renderDOM: function () {
     // DOM
@@ -402,6 +403,130 @@ const player = new Object({
     this._.hide()
     $body.css({ background: lightBodyColor, 'background-color': lightBodyColor })
     window.scrollTo(0, 0)
+  }
+})
+
+
+const gallery = new Object({
+  splide: undefined,
+
+  init: function () {
+    this.renderDOM()
+    this.bindEvents()
+    this.setGridTemplate()
+    this.appendSplideSliders()
+    this.initSplide()
+  },
+  renderDOM: function () {
+    this._ = $('.apl-gallery')
+    this.screen = $('.apl-gallery-screen')
+    this.slider = $('.gallery-slider')
+    this.grid = $('.apl-gallery__grid')
+    this.itemsArr = Array.from(this._.find('.apl-gallery-item'))
+    this.splideList = this._.find('.splide__list')
+
+    this.evtOpen = $('[data-evt="openGallery"]')
+    this.evtClose = $('[data-evt="closeGallery"]')
+    this.evtCloseSlider = $('[data-gallery-evt="closeSlider"]')
+  },
+
+
+  bindEvents: function () {
+    this.evtOpen.click(() => { gallery.open() })
+    this.evtClose.click(() => { gallery.close() })
+    this.evtCloseSlider.click(() => { gallery.closeSlider() })
+
+    $.each(this.itemsArr, function (i) {
+      const el = gallery.itemsArr[i]
+      el.onclick = () => {
+        gallery.openSlider( i )
+      }
+    })
+
+  },
+
+
+  setGridTemplate: function () {
+    const perGroup = 6
+    const itemsArray = this.itemsArr
+
+    const reducedArray = itemsArray.reduce((resultArray, item, index) => {
+      const groupIndex = Math.floor(index / perGroup)
+
+      if (!resultArray[groupIndex]) {
+        resultArray[groupIndex] = []
+      }
+
+      resultArray[groupIndex].push(item)
+
+      return resultArray
+    }, [])
+
+    $.each(reducedArray, function (i) {
+      const arr = reducedArray[i]
+
+      for (let n = 0; n < arr.length; n++) {
+        const el = arr[n]
+
+        let cssArea = n == 0 || n == 4 ? 'span 2 / span 2 / span 2 / span 2' : 'span 1 / span 1 / span 1 / span 1'
+        Object.assign(el.style, { 'grid-area': cssArea })
+      }
+    })
+  },
+  appendSplideSliders: function () {
+    const slidesArr = this.itemsArr,
+      newArr = []
+
+    for (let i = 0; i < slidesArr.length; i++) {
+      const el = slidesArr[i], newEl = el.cloneNode(true)
+      newEl.removeAttribute('style')
+      newEl.dataset.slideId = i
+      newEl.classList.add('splide__slide')
+      newArr.push(newEl)
+    }
+
+    this.splideList.append(newArr)
+  },
+  initSplide: function () {
+    this.splide = new Splide('#gallerySplide', {
+      type: 'loop',
+      perPage: 1,
+      focus: 'center',
+      rewind: false,
+      pagination: false
+    })
+
+    gallery.splide.mount()
+  },
+  closeSlider: function () {
+    Object.assign(this.slider[0].style, { opacity: 0 })
+    setTimeout(() => {
+      gallery.slider.hide()
+    }, getTransitionTime(gallery.slider[0]));
+  },
+  openSlider: function (slideIndex) {
+    gallery.slider.show()
+    setTimeout(() => {
+      Object.assign(this.slider[0].style, { opacity: 1 })
+    }, 1);
+
+    if (slideIndex) {
+      gallery.splide.go(slideIndex)
+    }
+  },
+  open: function () {
+    this._.show()
+    lockScroll()
+    setTimeout(() => {
+      Object.assign(this.screen[0].style, { transform: 'translateX(0%)', opacity: 1 })
+    }, 1);
+  },
+  close: function () {
+    unlockScroll()
+    Object.assign(this.screen[0].style, { transform: 'translateX(100%)', opacity: 0 })
+    setTimeout(() => {
+      this._.hide()
+    }, getTransitionTime(this.screen[0]));
   }
 })
 

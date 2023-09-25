@@ -1,4 +1,5 @@
 <!-- Main Screen -->
+{% include "../screens/gallery.twig" %}
 {% include "../screens/overscreen.twig" %}
 {% include "../components/player.twig" %}
 
@@ -325,7 +326,7 @@
 
 						<div class="apl-row-footer">
 							<div class="apl-row-footer__wrapper">
-								<button class="apl-row-btn">
+								<button data-evt="openGallery" class="apl-row-btn">
 									Go To Gallery
 									{% include "../svg/follow.svg" %}
 								</button>

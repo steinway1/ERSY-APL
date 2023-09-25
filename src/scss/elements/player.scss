@@ -5,16 +5,7 @@
   background-color: #242424;
   transition: all .4s cubic-bezier(.39, .575, .565, 1);
   position: relative;
-
-  *::-webkit-scrollbar {
-    display: none;
-  }
-
-  * {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
+  display: none;
 
   .apl-song {
     border-top: 1px solid transparent;

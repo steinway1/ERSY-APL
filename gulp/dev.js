@@ -45,7 +45,7 @@ const root = {
     _: './src/',
     html: './src/html/*.html',
     scss: './src/scss/*.scss',
-    js: './src/js/*.js',
+    js: './src/js/**/*.js',
     assets: './src/assets/**/*',
     fonts: './src/fonts/*',
     templates: './src/templates/*.twig',
