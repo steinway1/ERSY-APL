@@ -1,0 +1,107 @@
+.sticky-player {
+  z-index: 8;
+  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  display: none;
+
+  &.is-visible {
+    display: block;
+  }
+
+  .player-btn {
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    width: unset;
+    height: unset;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.sticky-player__main {
+  width: 100%;
+  grid-column-gap: 6%;
+  grid-row-gap: 6%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px 12px 12px;
+  display: flex;
+}
+
+.sticky-player__song-name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+}
+
+.sticky-player__controls {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  flex: none;
+  display: flex;
+}
+
+.sticky-player__artist {
+  color: rgba(23, 28, 41, .6);
+  font-size: 11px;
+  line-height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+}
+
+.sticky-player__progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #e2e2e2;
+  align-items: stretch;
+  display: flex;
+}
+
+.sticky-player__video-wrapper {
+  flex: none;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sticky-player__details {
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+}
+
+.sticky-player__current-progress {
+  width: 42%;
+  background-color: #dbc9a1;
+  transition: all .2s cubic-bezier(.39, .575, .565, 1);
+}
+
+.sticky-player__content {
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.sticky-player__video {
+  height: 54px;
+  object-fit: cover;
+}
