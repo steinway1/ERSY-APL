@@ -1,6 +1,7 @@
 const IS_ACTIVE = 'is-active',
   IS_HIDDEN = 'is-hidden',
-  IS_EXPANDED = 'is-expanded'
+  IS_EXPANDED = 'is-expanded',
+  IS_VISIBLE = 'is-visible'
 
 const $body = $('body')
 
@@ -322,6 +323,9 @@ const player = new Object({
     this.sectionName = $('.player__section-name')
     this.evtClose = getPlayerEvtDOM('close')
     this.evtOpen = getPlayerEvtDOM('open')
+    this.evtTogglePlaylist = getPlayerEvtDOM('togglePlaylist')
+    this.playlist = $('.player-playlist')
+    this.playlistContainer = $('.player-playlist__container')
   },
   bindEvents: function () {
     this.navBtn.click(function () { player.fn.toggleSection($(this)) })
@@ -331,6 +335,22 @@ const player = new Object({
         return
       } else {
         player.open()
+      }
+    })
+    this.evtTogglePlaylist.click(function () {
+      let pl = player.playlist; cont = player.playlistContainer
+      if (pl.isVisible()) {
+        unlockScroll()
+        cont.removeClass(IS_VISIBLE)
+        setTimeout(() => {
+          pl.hide()
+        }, getTransitionTime(cont));
+      } else {
+        lockScroll()
+        pl.show()
+        setTimeout(() => {
+          cont.addClass(IS_VISIBLE)
+        }, 1);
       }
     })
   },
@@ -403,6 +423,9 @@ const player = new Object({
     this._.hide()
     $body.css({ background: lightBodyColor, 'background-color': lightBodyColor })
     window.scrollTo(0, 0)
+  },
+  togglePlaylist: function () {
+
   }
 })
 
@@ -439,7 +462,7 @@ const gallery = new Object({
     $.each(this.itemsArr, function (i) {
       const el = gallery.itemsArr[i]
       el.onclick = () => {
-        gallery.openSlider( i )
+        gallery.openSlider(i)
       }
     })
 

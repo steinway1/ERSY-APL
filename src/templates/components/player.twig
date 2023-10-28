@@ -1,6 +1,29 @@
 {% set stickyVideo = false %}
 
 <div class="player">
+
+	<div class="player-playlist">
+		<div class="player-playlist__container">
+			<div class="player-header">
+				<button data-player-evt="togglePlaylist" class="apl-header-icon">
+					{% include "../svg/back.svg" %}
+				</button>
+				<h3 class="apl-screen-title">Playing Now</h3>
+			</div>
+			<div class="player-playlist__content">
+				<div class="player__items-wrap">
+					{% for i in 0..30 %}
+						{% if i == 1 %}
+							{% include "../elements/song-item.twig" with { active: true } %}
+						{% else %}
+							{% include "../elements/song-item.twig" %}
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="player-area">
 		<div class="player-screen">
 			<div class="player__background">
@@ -57,7 +80,8 @@
 
 				<div class="player__details">
 					<div class="player__song-name">{{video.name}}</div>
-					<div class="player__song-details">{{video.views}} views<span>•</span>
+					<div class="player__song-details">{{video.views}}
+						views<span>•</span>
 						{{video.uploadDate}}</div>
 				</div>
 
@@ -92,7 +116,7 @@
 							<button data-player-evt="shuffleSection" class="player__section-btn">
 								{% include "../svg/playlist-shuffle.svg" %}
 							</button>
-							<button data-player-evt="openSection" class="player__section-btn">
+							<button data-player-evt="togglePlaylist" class="player__section-btn">
 								{% include "../svg/burger.svg" %}
 							</button>
 						</div>
